@@ -251,15 +251,15 @@ export default {
     h3: {
       variant: "text.heading",
       fontSize: 3,
+      mt: 9,
       mb: 7,
-      mt: 7,
     },
     h4: {
       variant: "text.heading",
       fontSize: 2,
+      color: "lightGray",
       mb: 8,
       ml: -24,
-      color: "lightGray",
     },
     h5: {
       fontSize: 0,
@@ -314,11 +314,3 @@ export default {
     },
   },
 };
-
-// font-family: Sora;
-// fontSize: '64px',
-// fontStyle: 'normal',
-// fontWeight: '400',
-// lineHeight: '77px',
-// letterSpacing: '0.008em',
-// text-align: left;
