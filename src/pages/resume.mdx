@@ -1,32 +1,31 @@
 import { Grid, Container, Text, Alert, Link } from "theme-ui";
 import SEO from "../components/SEO";
+import { transparentize } from "@theme-ui/color";
 
 <SEO title={`Resume`} />
 
-<Alert
-  variant="container.wide"
-  sx={{
-    variant: "text.caption",
-    color: "background",
-    fontSize: 0,
-    px: ["unset", 32, 32],
-    py: 4,
-    mb: 9,
-  }}
->
-  PDF version can be found{" "}
-  <Link
-    herf="/"
-    sx={{ cursor: "pointer", "::after": { background: "background" } }}
+<Link herf="/" sx={{ cursor: "pointer", textDecoration: "none" }}>
+  <Alert
+    variant="container.wide"
+    sx={{
+      variant: "text.caption",
+      color: "background",
+      fontSize: 0,
+      backgroundColor: transparentize("primary", 0.15),
+      px: ["unset", 32, 32],
+      py: 4,
+      mb: 10,
+      transition: "all 200ms ease-out",
+      ":hover": { backgroundColor: "primary" },
+    }}
   >
-    &nbsp;here
-  </Link>
-  .
-</Alert>
+    PDF version can be found here.
+  </Alert>
+</Link>
 
 <Grid variant="container.wide" sx={{ gridTemplateColumns: [null,"0.16fr 0.83fr"], mb: 8 }}>
 
-<Container sx={{ mb: [3, 0] }}>
+<Container sx={{ mb: [5, 0] }}>
 
 <svg
   width="96"
