@@ -5,7 +5,6 @@ module.exports = {
     authr: "YuCheng Kuo",
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-image`,

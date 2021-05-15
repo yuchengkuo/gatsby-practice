@@ -1,5 +1,5 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 
 const SEO = ({ children, title, location, description, image }) => {

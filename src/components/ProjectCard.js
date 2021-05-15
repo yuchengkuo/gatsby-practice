@@ -23,6 +23,7 @@ const ProjectCard = ({ cover, title, tag, slug }) => {
         variant: "cards.project",
         overflow: "hidden",
         transition: "all 250ms ease-out",
+        textDecoration: "none",
       }}
     >
       <Box sx={{ p: 3, zIndex: 5, pointerEvents: "none" }}>
