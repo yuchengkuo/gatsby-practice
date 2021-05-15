@@ -8,13 +8,15 @@ const carouselAnimation = (e) => {
   const pos = e.clientX;
   const targetWid = e.currentTarget.scrollWidth;
   const windowWid = window.innerWidth * 0.985;
-  const max = targetWid - windowWid;
-  // console.log(windowWid / 2 - pos);
-  gsap.to(e.currentTarget, {
-    x: gsap.utils.mapRange(0, 1, max, -max, pos / windowWid),
-    duration: 0.75,
-    ease: "power1",
-  });
+  if (windowWid > 1300) {
+    const max = targetWid - windowWid;
+    // console.log(windowWid / 2 - pos);
+    gsap.to(e.currentTarget, {
+      x: gsap.utils.mapRange(0, 1, max, -max, pos / windowWid),
+      duration: 0.75,
+      ease: "power1",
+    });
+  }
 };
 
 const ImagesCarousel = ({ image }) => {
@@ -27,7 +29,7 @@ const ImagesCarousel = ({ image }) => {
         mx: "auto",
         justifyContent: "center",
         justifyItems: "center",
-        scrollbarWidth: "none",
+        scrollbarWidth: "thin",
         "::-webkit-scrollbar": { display: "none" },
         overflow: ["scroll", "scroll", "hidden"],
       }}
@@ -43,7 +45,7 @@ const ImagesCarousel = ({ image }) => {
         }}
         sx={{
           gridTemplateColumns: `repeat(${image.length}, 520px)`,
-          justifyContent: `center`,
+          justifyContent: [`start`, `start`, `center`],
           gap: 10,
         }}
       >
