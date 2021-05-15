@@ -13,7 +13,7 @@ export default {
     body: "Sora",
     heading: "Sora",
   },
-  breakpoints: ["700px", "1000px", "2000px"],
+  breakpoints: ["700px", "1300px", "2000px"],
   space: [0, 4, 8, 12, 16, 20, 24, 36, 40, 48, 64, 200],
   fontSizes: [
     "1.4rem",
@@ -129,7 +129,6 @@ export default {
       p: 5,
       backgroundColor: "background",
       color: "text",
-      width: 240,
       fontSize: 1,
       boxShadow: `inset 0px 4px 0px #FBA34A`,
       borderRadius: 2,
