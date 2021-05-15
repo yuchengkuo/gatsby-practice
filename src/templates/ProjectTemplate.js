@@ -4,13 +4,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { Card, Container } from "@theme-ui/components";
 
+// project components
 import Hero from "../components/project/Hero";
 import FullWidth from "../components/project/FullWidthImg";
 import Carousel from "../components/project/ImagesCarousel";
 import UpNext from "../components/project/UpNext";
+import Menu from "../components/project/Menu";
+
 import SEO from "../components/SEO";
-import { Reveal } from "react-gsap";
-import SlideUp from "../components/animation/SlideUp";
 
 const Article = ({ children }) => {
   return (
@@ -93,6 +94,10 @@ const ProjectTemplate = ({ data }) => {
 
       {/* render context in mdx */}
       <section>
+        <Menu
+          tableOfContents={data.mdx.tableOfContents}
+          headings={data.mdx.headings}
+        />
         <MDXProvider components={shortcodes}>
           <MDXRenderer localImages={embeddedImagesLocal}>
             {data.mdx.body}
@@ -113,6 +118,11 @@ export const ProjectQuery = graphql`
     mdx(id: { eq: $id }) {
       body
       id
+      tableOfContents(maxDepth: 2)
+      headings {
+        depth
+        value
+      }
       frontmatter {
         title
         subtitle
