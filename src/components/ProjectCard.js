@@ -1,15 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Box, Link, Text } from "@theme-ui/components";
+import { Badge, Box, Link, Text } from "@theme-ui/components";
 import { Link as GatsbyLink } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Tween } from "react-gsap";
+import { transparentize } from "@theme-ui/color";
 // import CardEffect from "./CardEffect";
 // import CardEffectReset from "./CardEffectReset";
 
 //data: link project-img, title, caption
 
-const ProjectCard = ({ cover, title, tag, slug }) => {
+const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
   const image = getImage(cover);
   const link = `${slug}`;
   return (
@@ -26,6 +27,22 @@ const ProjectCard = ({ cover, title, tag, slug }) => {
         textDecoration: "none",
       }}
     >
+      {badge && (
+        <Badge
+          sx={{
+            position: "absolute",
+            left: 3,
+            top: 3,
+            zIndex: 1,
+            backgroundColor: transparentize("gray", 0.3),
+            py: 1,
+            pointerEvents: "none",
+          }}
+        >
+          Draft
+        </Badge>
+      )}
+
       <Box sx={{ p: 3, zIndex: 5, pointerEvents: "none" }}>
         <Text
           as="p"

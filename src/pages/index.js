@@ -85,6 +85,7 @@ const IndexPage = ({ data }) => {
                 tag={item.node.frontmatter.tag}
                 cover={item.node.frontmatter.cover}
                 slug={item.node.fields.slug}
+                badge={item.node.frontmatter.badge}
               ></ProjectCard>
             ))}
           </Grid>
@@ -160,6 +161,7 @@ export const indexQuery = graphql`
           frontmatter {
             title
             tag
+            badge
             cover {
               childImageSharp {
                 gatsbyImageData(
