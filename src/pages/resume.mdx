@@ -1,0 +1,106 @@
+import { Grid, Container, Text, Alert, Link } from "@theme-ui/components";
+import SEO from "../components/SEO";
+
+<SEO title={`Resume`} />
+
+<Alert
+  variant="container.wide"
+  sx={{
+    variant: "text.caption",
+    color: "background",
+    fontSize: 0,
+    px: ["unset", 32, 32],
+    py: 4,
+    mb: 9,
+  }}
+>
+  PDF version can be found{" "}
+  <Link
+    herf="/"
+    sx={{ cursor: "pointer", "::after": { background: "background" } }}
+  >
+    &nbsp;here
+  </Link>
+  .
+</Alert>
+
+<Grid variant="container.wide" sx={{ gridTemplateColumns: [null,"0.16fr 0.83fr"], mb: 8 }}>
+
+<Container sx={{ mb: [3, 0] }}>
+
+<svg
+  width="96"
+  height="66"
+  viewBox="0 0 96 66"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M33 3V63M33 3H3L18 33L3 63H33M33 3H63M33 63H63M33 63L63 3M78 34.25L93 3H63M78 34.25L93 63H63M78 34.25L63 63"
+    stroke="#BDBEC1"
+    stroke-width="6"
+    stroke-linejoin="round"
+  />
+</svg>
+
+</Container>
+
+<Container>
+
+# YuCheng Kuo
+
+</Container>
+
+</Grid>
+
+<Grid variant="container.wide" sx={{gridTemplateColumns: [null, "0.64fr 0.36fr"], gap: 10}}>
+
+<Container>
+
+#### // Experience
+
+<Text variant="text.paragraph" sx={{ fontSize: 1, color: "lightGray" }}>
+  NCKU Formula Racing
+</Text>
+
+### Vice Captain
+
+Dolor vel pharetra at a netus fames placerat aliquam nibh faucibus iaculis egestas gravida congue gravida nisl sem fermentum nisl
+
+<Text variant="text.paragraph" sx={{ fontSize: 1, color: "lightGray" }}>
+  NCKU Formula Racing
+</Text>
+
+### Frame & Body Lead
+
+Dolor vel pharetra at a netus fames placerat aliquam nibh faucibus iaculis egestas gravida congue gravida nisl sem fermentum nisl
+
+#### // Projects
+
+### Redesign search process for timetable app
+
+</Container>
+
+<Container>
+
+#### // About
+
+Quis proin mi at quam facilisi enim, fermentum habitasse dui in pulvinar vulputate adipiscing placerat dui, aliquet ut maecenas elementum
+
+#### // Skills
+
+HTML  
+CSS  
+JS
+
+#### // Toolbox
+
+Figma  
+Miro  
+Framer  
+Webflow  
+VS Code
+
+</Container>
+
+</Grid>
