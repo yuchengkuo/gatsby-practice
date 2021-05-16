@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import { Card, Container } from "@theme-ui/components";
+import { Box, Card, Container, Flex } from "@theme-ui/components";
 
 // project components
 import Hero from "../components/project/Hero";
@@ -12,18 +12,7 @@ import UpNext from "../components/project/UpNext";
 import Menu from "../components/project/Menu";
 
 import SEO from "../components/SEO";
-
-const Article = ({ children }) => {
-  return (
-    <Container
-      as="article"
-      variant="section"
-      sx={{ variant: "container.text" }}
-    >
-      {children}
-    </Container>
-  );
-};
+import { useInView } from "react-intersection-observer";
 
 const ProjectTemplate = ({ data }) => {
   // destructure data
@@ -50,7 +39,24 @@ const ProjectTemplate = ({ data }) => {
     hero,
     color,
   };
-  // console.log(embeddedImagesLocal);
+
+  const Article = ({ children }) => {
+    const { ref, inView } = useInView({
+      threshold: 0.4,
+    });
+    return (
+      <>
+        <Container
+          as="article"
+          variant="section"
+          sx={{ variant: "container.text" }}
+          ref={ref}
+        >
+          {children}
+        </Container>
+      </>
+    );
+  };
 
   // shorcodes
   const shortcodes = {
@@ -78,7 +84,6 @@ const ProjectTemplate = ({ data }) => {
     next = data.allMdx.edges[currentIndex + 1];
     previous = data.allMdx.edges[currentIndex - 1];
   }
-  // console.log(next, previous);
   const upNextData = {
     next,
     previous,
@@ -92,12 +97,13 @@ const ProjectTemplate = ({ data }) => {
       {/* hero section */}
       <Hero heroData={heroData} />
 
+      <Menu
+        tableOfContents={data.mdx.tableOfContents}
+        headings={data.mdx.headings}
+      />
+
       {/* render context in mdx */}
       <section>
-        <Menu
-          tableOfContents={data.mdx.tableOfContents}
-          headings={data.mdx.headings}
-        />
         <MDXProvider components={shortcodes}>
           <MDXRenderer localImages={embeddedImagesLocal}>
             {data.mdx.body}
