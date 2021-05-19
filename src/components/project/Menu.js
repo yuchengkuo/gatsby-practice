@@ -1,11 +1,10 @@
 /** @jsx jsx */
-import { Box, Flex, jsx, Text } from "theme-ui";
-import React, { useRef, useState } from "react";
+import { Flex, jsx, Text } from "theme-ui";
+import { useState } from "react";
 import { transparentize } from "@theme-ui/color";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useInView } from "react-intersection-observer";
 import { Tween } from "react-gsap";
 
 gsap.registerPlugin(ScrollToPlugin);

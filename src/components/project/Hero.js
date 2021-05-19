@@ -5,7 +5,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CardEffect from "../CardEffect";
 import CardEffectReset from "../CardEffectReset";
 import Header from "../Header";
-import SlideUp from "../animation/SlideUp";
 import { Timeline, Tween } from "react-gsap";
 
 import "splitting/dist/splitting.css";
@@ -76,6 +75,7 @@ const Hero = (props) => {
                   },
                   (index = 0 ? null : "<0.4")
                 );
+                return;
               });
             }}
           >

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import { Box, Card, Container, Flex } from "@theme-ui/components";
+import { Card, Container } from "@theme-ui/components";
 
 // project components
 import Hero from "../components/project/Hero";

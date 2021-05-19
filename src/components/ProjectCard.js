@@ -3,7 +3,6 @@ import { jsx } from "theme-ui";
 import { Badge, Box, Link, Text } from "@theme-ui/components";
 import { Link as GatsbyLink } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Tween } from "react-gsap";
 import { transparentize } from "@theme-ui/color";
 // import CardEffect from "./CardEffect";
 // import CardEffectReset from "./CardEffectReset";
