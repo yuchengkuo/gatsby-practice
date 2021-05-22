@@ -18,19 +18,20 @@ const data = [
   },
   {
     title: "Develop",
-    items: ["Cooperations", "Modifications", "Assembly", "Challenges"],
+    items: ["Cooperations", "Modifications", "Assembly"],
   },
   {
     title: "Test",
-    items: ["Test Item", "Site", "Challenges"],
+    items: ["Test Items", "Site", "Safety"],
   },
   {
     title: "Compete",
-    items: ["Transportation", "Accommodation", "Challenges"],
+    items: ["Transportation", "Accommodation"],
   },
 ];
 
 const Process = () => {
+  const width = window.innerWidth - 800;
   return (
     <>
       <Grid
@@ -38,9 +39,9 @@ const Process = () => {
           position: "relative",
           gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
           gap: 10,
-          width: "90%",
-          mb: 11,
-          mx: "auto",
+          width: [`unset`, `calc(100% + ${width}px)`],
+          mx: [`unset`, `${-width / 2}px`],
+          my: 11,
           "& > :nth-of-type(1)": { transform: "translateY(20%)" },
           "& > :nth-of-type(2)": { transform: "translateY(10%)" },
           "& > :nth-of-type(4)": { transform: "translateY(-10%)" },

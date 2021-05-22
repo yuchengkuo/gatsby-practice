@@ -21,15 +21,17 @@ const carouselAnimation = (e) => {
 
 const ImagesCarousel = ({ image }) => {
   // console.log(image);
+  const width = window.innerWidth - 700;
   return (
     <Box
       className="carousel"
       sx={{
-        width: "99%",
-        mx: "auto",
+        width: [`unset`, `calc(100% + ${width}px)`],
+        mx: [`unset`, `${-width / 2}px`],
+        my: 11,
         justifyContent: "center",
         justifyItems: "center",
-        scrollbarWidth: "thin",
+        scrollbarWidth: "none",
         "::-webkit-scrollbar": { display: "none" },
         overflow: ["scroll", "scroll", "hidden"],
       }}

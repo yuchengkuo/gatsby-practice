@@ -3,20 +3,33 @@ import { Box, jsx, Themed } from "theme-ui";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CardEffect from "../CardEffect";
 import CardEffectReset from "../CardEffectReset";
+import { graphql, useStaticQuery } from "gatsby";
 
 const FullWidthImage = ({ children, image }) => {
   // console.log(image);
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allFile {
+
+  //     }
+  //   }
+  // `)
+
+  const width = window.innerWidth - 700;
+
   return (
-    <div
+    <Box
+      as="figure"
       onMouseMove={(e) => CardEffect(e, 0.1)}
       onMouseOut={CardEffectReset}
       role="img"
       sx={{
         position: "relative",
-        width: "99%",
-        left: "0.5%",
+        width: ["unset", `calc(100% + ${width}px)`],
         transition: "all 200ms ease-out",
-        my: 6,
+        mx: [`unset`, `${-width / 2}px`],
+        my: 11,
+        borderRadius: 2,
       }}
     >
       <Box
@@ -44,7 +57,7 @@ const FullWidthImage = ({ children, image }) => {
       >
         {children}
       </Themed.p>
-    </div>
+    </Box>
   );
 };
 

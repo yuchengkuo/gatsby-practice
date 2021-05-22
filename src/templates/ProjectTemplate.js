@@ -1,8 +1,10 @@
+/**  @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import { Card, Container } from "@theme-ui/components";
+import { Grid, Card, Container } from "@theme-ui/components";
 
 // project components
 import Hero from "../components/project/Hero";
@@ -40,30 +42,36 @@ const ProjectTemplate = ({ data }) => {
     color,
   };
 
-  const Article = ({ children }) => {
-    const { ref, inView } = useInView({
-      threshold: 0.4,
-    });
+  const Container = ({ children }) => {
     return (
       <>
-        <Container
+        <Grid
           as="article"
           variant="section"
-          sx={{ variant: "container.text" }}
-          ref={ref}
+          sx={{
+            display: ["unset", "grid"],
+            gridTemplateColumns: ["1fr", "auto minmax(auto, 640px) auto"],
+            gap: 0,
+            "> *": {
+              gridColumn: 2,
+            },
+          }}
         >
           {children}
-        </Container>
+        </Grid>
       </>
     );
   };
 
   // shorcodes
-  const shortcodes = {
+  const components = {
     FullWidth,
     Carousel,
-    Article,
-    Card,
+    wrapper: ({ children, ...props }) => {
+      console.log(children);
+
+      return <>{children}</>;
+    },
   };
 
   // data for upnext section
@@ -103,13 +111,15 @@ const ProjectTemplate = ({ data }) => {
       />
 
       {/* render context in mdx */}
-      <section>
-        <MDXProvider components={shortcodes}>
-          <MDXRenderer localImages={embeddedImagesLocal}>
-            {data.mdx.body}
-          </MDXRenderer>
-        </MDXProvider>
-      </section>
+      <article sx={{ px: [7, "unset"] }}>
+        <Container>
+          <MDXProvider components={components}>
+            <MDXRenderer localImages={embeddedImagesLocal}>
+              {data.mdx.body}
+            </MDXRenderer>
+          </MDXProvider>
+        </Container>
+      </article>
 
       {/* upNext section */}
       <UpNext upNextData={upNextData} />
