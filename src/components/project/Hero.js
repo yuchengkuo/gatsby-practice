@@ -149,7 +149,10 @@ const Hero = (props) => {
             sx={{
               boxShadow: `inset 0px 4px 0px #FBA34A`,
               variant: "container.wide",
-              gridTemplateColumns: "1fr 1fr 1fr",
+              gridTemplateColumns: "repeat(3, minmax(240px, 1fr))",
+              overflow: "scroll",
+              scrollbarWidth: "thin",
+              "::-webkit-scrollbar": { height: 2 },
               justifyItems: "stretch",
               justifyContent: "stretch",
               padding: [6, 6, 6],
@@ -163,7 +166,11 @@ const Hero = (props) => {
                 fontSize: 2,
                 mb: 4,
               },
-              p: { variant: "text.paragraph", fontSize: 1, color: "lightGray" },
+              p: {
+                variant: "text.paragraph",
+                fontSize: 1,
+                color: "lightGray",
+              },
             }}
           >
             <Box>
