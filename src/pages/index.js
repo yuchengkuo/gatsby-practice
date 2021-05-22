@@ -118,7 +118,7 @@ const IndexPage = ({ data }) => {
               variant="link.button"
               onMouseMove={CardEffect}
             >
-              Resume
+              Read CV
             </Link>
           </Flex>
         </Box>

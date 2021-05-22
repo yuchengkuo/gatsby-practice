@@ -199,7 +199,7 @@ export default {
       flexDirection: "column",
       justifyContent: "center",
       paddingBottom: 10,
-      px: [7, 7, "unset"],
+      px: [7, "unset"],
     },
   },
   section: {
