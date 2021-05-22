@@ -1,40 +1,4 @@
----
-type: project
-title: Building the first racecar in NCKU to compete FS.
-subtitle: NCKU Formula Racing Team
-slug: building-the-first-fs-racecar
-tag: Project Management, Engineering
-duration: 12 months
-role: Frame & Body Lead
-tasks:
-  - Frame Structure Design
-  - Vehicle Overall Planning
-  - Team Building
-cover: ./cover.jpg
-hero: ./hero.jpg
-color: "#CC0011"
-badge: true
-message: New
-embeddedImagesLocal:
-  - image1.jpg
-  - image2-1.jpg
-  - image2-2.jpg
-  - image2-3.jpg
-  - image2-4.jpg
-  - image3-1.jpg
-  - image3-2.jpg
-  - image3-3.jpg
-  - image3-4.jpg
-  - image4-1.jpg
-  - image4-2.jpg
-  - image4-3.jpg
-  - image4-4.jpg
-  - image-ach-1.jpg
-  - image-ach-2.jpg
-  - image-ach-3.jpg
----
-
-import Process from "./process";
+# Building the first racecar to compete in FS.
 
 #### // Intro
 
@@ -45,8 +9,6 @@ import Process from "./process";
 As new technology evolves much more quickly, the rapid advancement of industry makes it harder for undergrad students to keep up. Therefore, we were hoping through this project we can closer the gap and also discover new possibilities.
 
 This project started at my junior year at NCKU, with less than 10 members to begin(30 when season ended). **The primary goal was to build a formula-style racecar to compete in Formula Student (FS) event.** As one of the kick-off members, I had the opportunity to execute and learn end to end. It was a wild ride and special experience for me.🤘🏼
-
-<FullWidth image={props.localImages[0]}>Event Photo @ FS Japan 2019</FullWidth>
 
 ### The Competition
 
@@ -64,34 +26,49 @@ There are two events in the competition, static event and dynamic event. Static 
 
 > We aimed for electric class for broader diversity and promising trend of EV.⚡️
 
-<Carousel
-  image={[
-    {
-      img: props.localImages[1],
-      caption: `Electrical inspection (Static Event) @ FS Japan 2019`,
-    },
-    {
-      img: props.localImages[2],
-      caption: `Dynamic Event @ FS Japan 2019`,
-    },
-    {
-      img: props.localImages[3],
-      caption: `Technical inspection (Static Event) @ FS Japan 2019`,
-    },
-    {
-      img: props.localImages[4],
-      caption: `Dynamic Event @ FS Japan 2019`,
-    },
-  ]}
-/>
-
 #### // Process
 
 This project took 12 months to build out the vehicle, and the overall timeline was research, design, develop, test and finally participate in the race, which consisted of different iterations and timeline for each sunbeam.
 
-<Process />
+#### Research
 
-###### 01
+Background
+
+Competition rules
+
+Project goal
+
+Challenges
+
+#### Design
+
+Design goals
+
+Design process
+
+Challenges
+
+#### Develop
+
+Cooperation
+
+Modification
+
+Assembly
+
+#### Test
+
+Testing Items
+
+Safety
+
+Site
+
+#### Compete
+
+Transportation
+
+Accommodation
 
 ## Research
 
@@ -107,7 +84,7 @@ Realizing the project scope and the competition, we had a better picture of what
 
 > Desgin and develop the first electric racecar to finish the static event. (Further to join the dynamic event if possible.)
 
-### The Challenge
+### The Challenges
 
 - Where does the resources (financial and material) come from?
 - How much resources do we need?
@@ -116,36 +93,13 @@ Realizing the project scope and the competition, we had a better picture of what
 
 > **Reach out & Look for help**
 
-We first pitched this idea to the experienced and alumus, looking for advice and potential assistances. Thankfully we received many encouragement and valuable advice, which became a huge boost for us.
+We first pitched this idea to the experienced and alumus, looking for advice and potential assistances. Thankfully we received many encouragement and valuable advice, which turned into a huge boost for us.
 
-We recruited more members first from acquaintances, and then started building more presence through some campaigns (club festival, etc) to reach out to those with different background. It's a challenge to infect others when we had nothing but only passionate heart.
+And we recruited more members first from acquaintances, and then built more presence through some campaigns(club festival etc) to reach out to those with different background. It’s a challenge when we had nothing but a passionate heart🔥.
 
 Finally we spent time visiting other experienced team, [NTHU Racing](https://www.facebook.com/NTHU.Racing), [STUST Racing](https://www.facebook.com/ST.RacingTeam2005/?__xts__[0]=68.ARD6dIyZilqk1uWFs-2tal3jqum-tGOrWlqmzZVZRlhM9mW5JkQEX3w4p4Ee-CbjqM8sxNsQi_UpwImqGqg0_1h2_Cqb6ust-OEe21oNua7RTE9Cgh_4w73zJVy1NEAYVoMyqoJ92G0XyovMTsmCvl5Ulu0MxDvsNajepXnEHjabh7tCA737sUjHO_imM0rMiJE1Aho5Oau2vTvqs04WbvS52rBhQiWOAWhxYmaZechghCb85jS38AbZKPuR9ZbTcWtPGqBL_gNNp2p6a4tsdQU9CnX6E63wKvR6MVlLUYRqOl_JNDGtNw), and [Taipei Tech Racing](https://www.facebook.com/TaipeiTechRacing/). Actually seeing what they've built and listening to their stories really taught us a lot (and realized it's going to be tough.🤞🏼)
 
 On the other hand, often time we found ourselves lost in sudden amout of information🤯, filtering and transforming them into future plans were what we managed to learned.
-
-<Carousel
-  image={[
-    {
-      img: props.localImages[5],
-      caption: `Visiting Taipei Tech Racing @ Jul 2018`,
-    },
-    {
-      img: props.localImages[6],
-      caption: `Early meeting @ Feb 2018`,
-    },
-    {
-      img: props.localImages[7],
-      caption: `Visiting NTHU Racing @ Oct 2018`,
-    },
-    {
-      img: props.localImages[8],
-      caption: `Learning modeling from experienced @ Dec 2018`,
-    },
-  ]}
-/>
-
-###### 02
 
 ## Design
 
@@ -182,29 +136,6 @@ We discussed frequently to keep everyone on the same page, and when there’s ch
 
 Usually frame subteam was the first to take action in order to have the basic structure and then keep modifying until the end of the design phase, that is begin the first while finish the last.
 
-<Carousel
-  image={[
-    {
-      img: props.localImages[9],
-      caption: `(Messy) initial sketches`,
-    },
-    {
-      img: props.localImages[10],
-      caption: `some caption`,
-    },
-    {
-      img: props.localImages[11],
-      caption: `Whole car side view drawing`,
-    },
-    {
-      img: props.localImages[12],
-      caption: `Final rendered model with jigs`,
-    },
-  ]}
-/>
-
-###### 03
-
 ## Develop
 
 (After countless design changes we finally made it to the development!🛠)
@@ -232,50 +163,6 @@ Timeline collaboration between different subteams was another lesson for us, wel
 
 Also having a plan B is essential to make sure the development could continue with a backup even in the worst situation. (Well, better said than done, it’s more complicated than what we thought.)
 
-<Carousel
-  image={[
-    {
-      img: props.localImages[13],
-      caption: `Bodywork polishing @ `,
-    },
-    {
-      img: props.localImages[14],
-      caption: `Accumulator assembly @ `,
-    },
-    {
-      img: props.localImages[15],
-      caption: `Jigs welding @ `,
-    },
-    {
-      img: props.localImages[16],
-      caption: `Frame welding @ `,
-    },
-  ]}
-/>
-
-<Carousel
-  image={[
-    {
-      img: props.localImages[17],
-      caption: `Battery cells assembly @ `,
-    },
-    {
-      img: props.localImages[18],
-      caption: `Frame coloring @ `,
-    },
-    {
-      img: props.localImages[19],
-      caption: `Assembly @ `,
-    },
-    {
-      img: props.localImages[20],
-      caption: `Frame welding @ `,
-    },
-  ]}
-/>
-
-###### 04
-
 ## Test
 
 The testing was not only for validation of our designs, but also for driver to get acquainted with the vehicle (even though the time is basically none). **We also ran through the competition items to make sure everything was ready and to let us know what to do when similar situations occur.**
@@ -289,9 +176,7 @@ Before getting into the competition, teams have to submit a video of vehicle in 
 - Procedure when problems occur.
 - Transportation to competition site.
 
-At this time the problems usually showed up suddenly, we must learn to react quickly and address accordingly. What we could do was trying to lower the chances and building a procedure to address the situation.
-
-###### 05
+At this time the problems usually showed up suddenly, we must learn to react quickly and address accordingly. What we could do was trying to lower the chances and building a procedure to address the situation. I think we would never forget the day we finally packed the vehicle and sent it to the competition site, the workshop was a mess, we sat
 
 ## Compete
 
@@ -309,23 +194,27 @@ We were stuck at the final check for electric system, we couldn’t find the cau
 
 For the last 2 days, apart from enjoying the dynamic event🏎️, we also spent lots of time learning from the judges and other teams. It was brilliant to find so many passionate hearts and be able to share experiences and thoughts about the competition with each other. Besides, we grab the chance to chat with the design judges, we were so glad that some designs were recognized for a first year electric team, and it clearly showed us what could be achieved with the effort from both industry and academic.
 
-Note: For 27 EVs, 11 passed the inspection, 9 joined the dynamic event, 7 finished the race, e ended up 13 out of 27. More information about the completion results can be found [here](jsae).
+Note: For 27 EVs, 11 passed the inspection, 9 joined the dynamic event, 7 finished the race, e ended up 13 out of 27. More information about the completion results can be found [here](jdae).
 
 #### // Results
 
 ## Achievements
 
-![first fs racecar built in NCKU](./images/achievement/image-ach-1.jpg)
+![](https://images.unsplash.com/photo-1572781066627-ab2390e05788?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDIyNzR8MHwxfHNlYXJjaHwxMHx8Zm9ybXVsYXxlbnwwfHx8fDE2MjAzNzYyNDg&ixlib=rb-1.2.1&q=80&w=1080)
 
-### First FS racecar built in NCKU
+### First FS racecar built in NCKU.
 
 Developed the first electric FS vehicle in NCKU, and lead to participate the competition for the first time.
 
-### Second team to pass the static event for electric class
+![](https://images.unsplash.com/photo-1541443724873-8ba49db7a737?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDIyNzR8MHwxfHNlYXJjaHwyMHx8Y29tcGV0aXRpb258ZW58MHx8fHwxNjIwMzc2Mjg5&ixlib=rb-1.2.1&q=80&w=1080)
+
+### Second team in Taiwan to pass the inspection for electric class.
 
 We are the second team to pass the inspection for electric class in Taiwan, while it’s such a pity we couldn’t finish the race.
 
-### Establishment of a multidisciplinary team
+![](https://images.unsplash.com/photo-1510146758428-e5e4b17b8b6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDIyNzR8MHwxfHNlYXJjaHw3fHx0ZWFtfGVufDB8fHx8MTYyMDM3NjMxMw&ixlib=rb-1.2.1&q=80&w=1080)
+
+### Establishment of a multidisciplinary team.
 
 Diversity and teamwork are two beliefs in the team, which can move towards wider aspects in the future.
 
@@ -349,9 +238,15 @@ The whole journey in this project was full of problems, not only technically but
 
 ## Conclusion & Next Step
 
-在大學期間學習到最多東西的時期
-最全神貫注的時期
-專案運作的過程，更認識自己
+For a mechanical engineering student,
+
+This year was one of the
+
+Realizing how big the world is
+
+Broaden the vision
+
+Know myself better
 
 ### Reference Links
 
