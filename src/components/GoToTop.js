@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, useThemeUI } from "theme-ui";
 import { Box, Flex } from "@theme-ui/components";
 import { AnimatePresence, motion, useViewportScroll } from "framer-motion";
 import { useState } from "react";
@@ -13,7 +13,7 @@ function goTopEvent(e) {
   });
 }
 
-const IconSVG = () => (
+const IconSVG = ({ path }) => (
   <svg
     width="40"
     height="40"
@@ -21,9 +21,10 @@ const IconSVG = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path
+    <motion.path
       d="M20 11.6667L33.3333 25L30.9763 27.357L20 16.3807L9.02365 27.357L6.66663 25L20 11.6667Z"
       fill="#FBA34A"
+      variants={path}
     />
   </svg>
 );
@@ -40,84 +41,115 @@ const GoToTop = () => {
       setShow(false);
     }
   }
+
+  const MotionBox = motion(Box);
+  const MotionFlex = motion(Flex);
+  const context = useThemeUI();
+
+  const variant = {
+    hover: {
+      scale: 1.15,
+      backgroundColor: `${context.theme.colors.primary}`,
+    },
+  };
+
+  const icon = {
+    hover: {
+      y: `-100%`,
+      transition: {
+        repeat: Infinity,
+        repeatDelay: 0.6,
+        delay: 0.2,
+      },
+    },
+  };
+
+  const path = {
+    hover: {
+      fill: `${context.theme.colors.background}`,
+    },
+  };
+
   return (
     <AnimatePresence>
       {show && (
-        <motion.div
-          initial={{ y: -2, opacity: 0 }}
+        <MotionBox
+          as="button"
+          initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 2, opacity: 0 }}
+          exit={{ y: 40, opacity: 0 }}
+          variants={variant}
+          whileHover="hover"
+          whileTap={{ scale: 0.9 }}
+          onClick={goTopEvent}
+          sx={{
+            position: "fixed",
+            variant: "shadows.card",
+            backgroundColor: transparentize("background", 0.2),
+            border: "none",
+            borderRadius: "50%",
+            cursor: "pointer",
+            right: 8,
+            bottom: 8,
+            height: 64,
+            width: 64,
+            zIndex: 999,
+            overflow: "hidden",
+          }}
         >
+          {/* progress indicator */}
           <Box
-            as="button"
-            onClick={goTopEvent}
             sx={{
-              position: "fixed",
-              variant: "shadows.card",
-              backgroundColor: transparentize("background", 0.2),
-              border: "none",
-              borderRadius: "50%",
-              cursor: "pointer",
-              right: 8,
-              bottom: 8,
-              height: 64,
-              width: 64,
-              zIndex: 999,
-              overflow: "hidden",
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              zIndex: "0",
             }}
           >
-            {/* progress indicator */}
-            <Box
-              sx={{
-                position: "absolute",
-                width: "100%",
-                height: "100%",
-                zIndex: "0",
-              }}
+            <svg
+              width="64"
+              height="64"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: "100%" }}
             >
-              <svg
-                width="64"
-                height="64"
-                viewBox="0 0 36 36"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ width: "100%" }}
-              >
-                <motion.path
-                  d="M1,18a17,17 0 1,0 34,0a17,17 0 1,0 -34,0"
-                  stroke="#FBA34A"
-                  strokeWidth="2"
-                  style={{
-                    pathLength: scrollYProgress,
-                    rotateZ: "90deg",
-                    scaleX: "-1",
-                  }}
-                />
-              </svg>
-            </Box>
-
-            <Flex
-              sx={{
-                width: "100%",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <IconSVG />
-            </Flex>
-            <Flex
-              sx={{
-                width: "full",
-                height: "full",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <IconSVG />
-            </Flex>
+              <motion.path
+                d="M1,18a17,17 0 1,0 34,0a17,17 0 1,0 -34,0"
+                stroke="#FBA34A"
+                strokeWidth="2"
+                style={{
+                  pathLength: scrollYProgress,
+                  rotateZ: "90deg",
+                  scaleX: "-1",
+                }}
+              />
+            </svg>
           </Box>
-        </motion.div>
+
+          <MotionFlex
+            variants={icon}
+            sx={{
+              width: "100%",
+              height: "100%",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <IconSVG path={path} />
+          </MotionFlex>
+          <MotionFlex
+            variants={icon}
+            sx={{
+              width: "full",
+              height: "full",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <IconSVG path={path} />
+          </MotionFlex>
+        </MotionBox>
       )}
     </AnimatePresence>
   );
