@@ -10,6 +10,7 @@ import { Grid, Card, Container } from "@theme-ui/components";
 import Hero from "../components/project/Hero";
 import FullWidth from "../components/project/FullWidthImg";
 import Carousel from "../components/project/ImagesCarousel";
+import InlineImage from "../components/project/InlineImage";
 import UpNext from "../components/project/UpNext";
 import Menu from "../components/project/Menu";
 
@@ -27,7 +28,7 @@ const ProjectTemplate = ({ data }) => {
     role,
     tasks,
     color,
-    embeddedImagesLocal,
+    images,
     hero,
   } = data.mdx.frontmatter;
 
@@ -67,11 +68,7 @@ const ProjectTemplate = ({ data }) => {
   const components = {
     FullWidth,
     Carousel,
-    wrapper: ({ children, ...props }) => {
-      console.log(children);
-
-      return <>{children}</>;
-    },
+    InlineImage,
   };
 
   // data for upnext section
@@ -114,9 +111,7 @@ const ProjectTemplate = ({ data }) => {
       <article sx={{ px: [7, "unset"] }}>
         <Container>
           <MDXProvider components={components}>
-            <MDXRenderer localImages={embeddedImagesLocal}>
-              {data.mdx.body}
-            </MDXRenderer>
+            <MDXRenderer images={images}>{data.mdx.body}</MDXRenderer>
           </MDXProvider>
         </Container>
       </article>
@@ -148,7 +143,7 @@ export const ProjectQuery = graphql`
         role
         tasks
         color
-        embeddedImagesLocal {
+        images {
           childImageSharp {
             gatsbyImageData(
               layout: FULL_WIDTH

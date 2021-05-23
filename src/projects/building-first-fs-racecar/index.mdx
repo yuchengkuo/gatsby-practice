@@ -15,29 +15,32 @@ hero: ./hero.jpg
 color: "#CC0011"
 badge:
   - show: true
-    message: new
-embeddedImagesLocal:
-  - image1.jpg
-  - image2-1.jpg
-  - image2-2.jpg
-  - image2-3.jpg
-  - image2-4.jpg
-  - image3-1.jpg
-  - image3-2.jpg
-  - image3-3.jpg
-  - image3-4.jpg
-  - image4-1.jpg
-  - image4-2.jpg
-  - image4-3.jpg
-  - image4-4.jpg
-  - image-ach-1.jpg
-  - image-ach-2.jpg
-  - image-ach-3.jpg
+    message: featured
 images:
-  - path: achievement
-    url:
-      - ./images/achievement/image-ach-1.jpg
-      - ./images/achievement/image-ach-2.jpg
+  - ./images/image1.jpg
+  - ./images/image-comp-1.jpg
+  - ./images/image-comp-2.jpg
+  - ./images/image-comp-3.jpg
+  - ./images/image-comp-4.jpg
+  - ./images/image-res-1.jpg
+  - ./images/image-res-2.jpg
+  - ./images/image-res-3.jpg
+  - ./images/image-res-4.jpg
+  - ./images/image-des-1.jpg
+  - ./images/image-des-2.jpg
+  - ./images/image-des-3.jpg
+  - ./images/image-des-4.jpg
+  - ./images/image-dev-1.jpg
+  - ./images/image-dev-2.jpg
+  - ./images/image-dev-3.jpg
+  - ./images/image-dev-4.jpg
+  - ./images/image-dev-5.jpg
+  - ./images/image-dev-6.jpg
+  - ./images/image-dev-7.jpg
+  - ./images/image-dev-8.jpg
+  - ./images/image-ach-1.jpg
+  - ./images/image-ach-2.jpg
+  - ./images/image-ach-3.jpg
 ---
 
 import Process from "./process";
@@ -52,7 +55,7 @@ As new technology evolves much more quickly, the rapid advancement of industry m
 
 This project started at my junior year at NCKU, with less than 10 members to begin(30 when season ended). **The primary goal was to build a formula-style racecar to compete in Formula Student (FS) event.** As one of the kick-off members, I had the opportunity to execute and learn end to end. It was a wild ride and special experience for me.🤘🏼
 
-<FullWidth image={props.localImages[0]}>Event Photo @ FS Japan 2019</FullWidth>
+<FullWidth image={props.images[0]}>Event Photo @ FS Japan 2019</FullWidth>
 
 ### The Competition
 
@@ -73,19 +76,19 @@ There are two events in the competition, static event and dynamic event. Static 
 <Carousel
   image={[
     {
-      img: props.localImages[1],
+      img: props.images[1],
       caption: `Electrical inspection (Static Event) @ FS Japan 2019`,
     },
     {
-      img: props.localImages[2],
+      img: props.images[2],
       caption: `Dynamic Event @ FS Japan 2019`,
     },
     {
-      img: props.localImages[3],
+      img: props.images[3],
       caption: `Technical inspection (Static Event) @ FS Japan 2019`,
     },
     {
-      img: props.localImages[4],
+      img: props.images[4],
       caption: `Dynamic Event @ FS Japan 2019`,
     },
   ]}
@@ -126,26 +129,26 @@ We first pitched this idea to the experienced and alumus, looking for advice and
 
 We recruited more members first from acquaintances, and then started building more presence through some campaigns (club festival, etc) to reach out to those with different background. It's a challenge to infect others when we had nothing but only passionate heart.
 
-Finally we spent time visiting other experienced team, [NTHU Racing](https://www.facebook.com/NTHU.Racing), [STUST Racing](https://www.facebook.com/ST.RacingTeam2005/?__xts__[0]=68.ARD6dIyZilqk1uWFs-2tal3jqum-tGOrWlqmzZVZRlhM9mW5JkQEX3w4p4Ee-CbjqM8sxNsQi_UpwImqGqg0_1h2_Cqb6ust-OEe21oNua7RTE9Cgh_4w73zJVy1NEAYVoMyqoJ92G0XyovMTsmCvl5Ulu0MxDvsNajepXnEHjabh7tCA737sUjHO_imM0rMiJE1Aho5Oau2vTvqs04WbvS52rBhQiWOAWhxYmaZechghCb85jS38AbZKPuR9ZbTcWtPGqBL_gNNp2p6a4tsdQU9CnX6E63wKvR6MVlLUYRqOl_JNDGtNw), and [Taipei Tech Racing](https://www.facebook.com/TaipeiTechRacing/). Actually seeing what they've built and listening to their stories really taught us a lot (and realized it's going to be tough.🤞🏼)
+Finally we spent time visiting other experienced team, [NTHU Racing](https://www.facebook.com/NTHU.Racing), [STUST Racing](https://www.facebook.com/ST.RacingTeam2005), and [Taipei Tech Racing](https://www.facebook.com/TaipeiTechRacing/). Actually seeing what they've built and listening to their stories really taught us a lot (and realized it's going to be tough.🤞🏼)
 
 On the other hand, often time we found ourselves lost in sudden amout of information🤯, filtering and transforming them into future plans were what we managed to learned.
 
 <Carousel
   image={[
     {
-      img: props.localImages[5],
+      img: props.images[5],
       caption: `Visiting Taipei Tech Racing @ Jul 2018`,
     },
     {
-      img: props.localImages[6],
+      img: props.images[6],
       caption: `Early meeting @ Feb 2018`,
     },
     {
-      img: props.localImages[7],
+      img: props.images[7],
       caption: `Visiting NTHU Racing @ Oct 2018`,
     },
     {
-      img: props.localImages[8],
+      img: props.images[8],
       caption: `Learning modeling from experienced @ Dec 2018`,
     },
   ]}
@@ -191,19 +194,19 @@ Usually frame subteam was the first to take action in order to have the basic st
 <Carousel
   image={[
     {
-      img: props.localImages[9],
+      img: props.images[9],
       caption: `(Messy) initial sketches`,
     },
     {
-      img: props.localImages[10],
+      img: props.images[10],
       caption: `some caption`,
     },
     {
-      img: props.localImages[11],
+      img: props.images[11],
       caption: `Whole car side view drawing`,
     },
     {
-      img: props.localImages[12],
+      img: props.images[12],
       caption: `Final rendered model with jigs`,
     },
   ]}
@@ -223,6 +226,27 @@ Reaching out to the industry and local corporations let us know practical applic
 
 Note: At this time, we were facing competition documents to hand in, development process, final exams,🥲
 
+<Carousel
+  image={[
+    {
+      img: props.images[13],
+      caption: `Bodywork polishing @ `,
+    },
+    {
+      img: props.images[14],
+      caption: `Accumulator assembly @ `,
+    },
+    {
+      img: props.images[15],
+      caption: `Jigs welding @ `,
+    },
+    {
+      img: props.images[16],
+      caption: `Frame welding @ `,
+    },
+  ]}
+/>
+
 ### The Challenges
 
 - How to solve problems that come up during development?
@@ -241,40 +265,19 @@ Also having a plan B is essential to make sure the development could continue wi
 <Carousel
   image={[
     {
-      img: props.localImages[13],
-      caption: `Bodywork polishing @ `,
-    },
-    {
-      img: props.localImages[14],
-      caption: `Accumulator assembly @ `,
-    },
-    {
-      img: props.localImages[15],
-      caption: `Jigs welding @ `,
-    },
-    {
-      img: props.localImages[16],
-      caption: `Frame welding @ `,
-    },
-  ]}
-/>
-
-<Carousel
-  image={[
-    {
-      img: props.localImages[17],
+      img: props.images[17],
       caption: `Battery cells assembly @ `,
     },
     {
-      img: props.localImages[18],
+      img: props.images[18],
       caption: `Frame coloring @ `,
     },
     {
-      img: props.localImages[19],
+      img: props.images[19],
       caption: `Assembly @ `,
     },
     {
-      img: props.localImages[20],
+      img: props.images[20],
       caption: `Frame welding @ `,
     },
   ]}
@@ -321,15 +324,19 @@ Note: For 27 EVs, 11 passed the inspection, 9 joined the dynamic event, 7 finish
 
 ## Achievements
 
-![first fs racecar built in NCKU](./images/achievement/image-ach-1.jpg)
+<InlineImage image={props.images[21]} />
 
 ### First FS racecar built in NCKU
 
 Developed the first electric FS vehicle in NCKU, and lead to participate the competition for the first time.
 
+<InlineImage image={props.images[22]} />
+
 ### Second team to pass the static event for electric class
 
 We are the second team to pass the inspection for electric class in Taiwan, while it’s such a pity we couldn’t finish the race.
+
+<InlineImage image={props.images[23]} />
 
 ### Establishment of a multidisciplinary team
 

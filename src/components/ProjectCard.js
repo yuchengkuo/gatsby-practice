@@ -13,7 +13,6 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
   const image = getImage(cover);
   const link = `${slug}`;
-  console.log(badge);
 
   const MotionLink = motion(Link);
   return (
@@ -30,7 +29,7 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >
-      {badge.show && (
+      {badge?.show && (
         <Badge
           sx={{
             position: "absolute",
@@ -43,7 +42,7 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
             textTransform: "capitalize",
           }}
         >
-          {badge.message}
+          {badge?.message}
         </Badge>
       )}
 

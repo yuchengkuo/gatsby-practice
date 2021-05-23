@@ -3,18 +3,8 @@ import { Box, jsx, Themed } from "theme-ui";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import CardEffect from "../CardEffect";
 import CardEffectReset from "../CardEffectReset";
-import { graphql, useStaticQuery } from "gatsby";
 
 const FullWidthImage = ({ children, image }) => {
-  // console.log(image);
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     allFile {
-
-  //     }
-  //   }
-  // `)
-
   const width = window.innerWidth - 700;
 
   return (
