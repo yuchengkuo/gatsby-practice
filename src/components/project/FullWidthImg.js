@@ -1,12 +1,8 @@
 /** @jsx jsx */
 import { Box, jsx, Themed } from "theme-ui";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import CardEffect from "../CardEffect";
-import CardEffectReset from "../CardEffectReset";
 
 const FullWidthImage = ({ children, image }) => {
-  const width = 800;
-
   return (
     <Box
       as="figure"
