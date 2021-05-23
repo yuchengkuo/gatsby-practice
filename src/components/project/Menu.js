@@ -38,7 +38,8 @@ const Menu = ({ tableOfContents }) => {
         position: "fixed",
         backgroundColor: transparentize("darkGray", 0.8),
         top: 280,
-        left: 9,
+        left: 8,
+        width: 260,
         p: 5,
         flexDirection: "column",
         gap: 1,
@@ -49,9 +50,9 @@ const Menu = ({ tableOfContents }) => {
       initial="initial"
       animate={show ? "show" : "initial"}
     >
-      {heading.map((item, index) => (
+      {heading?.map((item, index) => (
         <MotionText
-          onTap={() => {
+          whileTap={() => {
             gsap.to(window, {
               scrollTo: { y: `${item.url}`, offsetY: 40 },
               ease: "power2.inOut",

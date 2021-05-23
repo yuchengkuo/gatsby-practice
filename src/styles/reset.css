@@ -1,0 +1,12 @@
+html {
+  background-color: #18191b;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  background: #fba34a;
+  color: #18191b;
+}

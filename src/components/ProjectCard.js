@@ -4,6 +4,7 @@ import { Badge, Box, Link, Text } from "@theme-ui/components";
 import { Link as GatsbyLink } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { transparentize } from "@theme-ui/color";
+import { motion } from "framer-motion";
 // import CardEffect from "./CardEffect";
 // import CardEffectReset from "./CardEffectReset";
 
@@ -12,21 +13,24 @@ import { transparentize } from "@theme-ui/color";
 const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
   const image = getImage(cover);
   const link = `${slug}`;
+  console.log(badge);
+
+  const MotionLink = motion(Link);
   return (
-    <Link
+    <MotionLink
       as={GatsbyLink}
       to={link}
       sx={{
-        ":hover": { transform: "scale3d(1.02,1.02,1.02)" },
-        ":active": { transform: "scale3d(0.99,0.99,0.99)" },
         "::after": { content: "none" },
         variant: "cards.project",
         overflow: "hidden",
         transition: "all 250ms ease-out",
         textDecoration: "none",
       }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
-      {badge && (
+      {badge.show && (
         <Badge
           sx={{
             position: "absolute",
@@ -36,9 +40,10 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
             backgroundColor: transparentize("gray", 0.3),
             py: 1,
             pointerEvents: "none",
+            textTransform: "capitalize",
           }}
         >
-          Draft
+          {badge.message}
         </Badge>
       )}
 
@@ -85,7 +90,7 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
           className="project-image"
         />
       </Box>
-    </Link>
+    </MotionLink>
   );
 };
 

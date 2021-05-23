@@ -13,8 +13,9 @@ tasks:
 cover: ./cover.jpg
 hero: ./hero.jpg
 color: "#CC0011"
-badge: true
-message: New
+badge:
+  - show: true
+    message: new
 embeddedImagesLocal:
   - image1.jpg
   - image2-1.jpg
@@ -32,6 +33,11 @@ embeddedImagesLocal:
   - image-ach-1.jpg
   - image-ach-2.jpg
   - image-ach-3.jpg
+images:
+  - path: achievement
+    url:
+      - ./images/achievement/image-ach-1.jpg
+      - ./images/achievement/image-ach-2.jpg
 ---
 
 import Process from "./process";
