@@ -1,9 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Card, Flex, Grid, Link } from "@theme-ui/components";
+import { jsx, useThemeUI } from "theme-ui";
+import { Card, Grid } from "@theme-ui/components";
 import React from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -32,9 +33,14 @@ const data = [
 
 const Process = () => {
   const width = window.innerWidth - 800;
+
+  const MotionGrid = motion(Grid);
+  const MotionCard = motion(Card);
+  const context = useThemeUI();
+
   return (
     <>
-      <Grid
+      <MotionGrid
         sx={{
           position: "relative",
           gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
@@ -49,7 +55,10 @@ const Process = () => {
         }}
       >
         {data.map((item, index) => (
-          <Card
+          <MotionCard
+            whileHover={{
+              backgroundColor: `${context.theme.colors.darkGray}`,
+            }}
             onClick={() => {
               gsap.to(window, {
                 scrollTo: { y: `#${item.title.toLowerCase()}`, offsetY: 50 },
@@ -62,7 +71,6 @@ const Process = () => {
               textDecoration: "none",
               transition: "all 200ms ease-out",
               cursor: "pointer",
-              ":hover": { backgroundColor: "darkGray" },
             }}
           >
             <h4 sx={{ variant: "text.heading", fontSize: 2 }}>{item.title}</h4>
@@ -74,9 +82,9 @@ const Process = () => {
                 {li}
               </p>
             ))}
-          </Card>
+          </MotionCard>
         ))}
-      </Grid>
+      </MotionGrid>
     </>
   );
 };
