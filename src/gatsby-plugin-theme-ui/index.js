@@ -300,8 +300,10 @@ export default {
       fontWeight: 700,
       px: 5,
       pt: 1,
+      mb: 6,
       boxShadow: `inset 6px 0px 0px #FBA34A`,
       background: `#FBA34A10`,
+      p: { mb: 0 },
     },
     em: {
       color: "background",
