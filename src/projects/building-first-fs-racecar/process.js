@@ -32,8 +32,6 @@ const data = [
 ];
 
 const Process = () => {
-  const width = window.innerWidth - 800;
-
   const MotionGrid = motion(Grid);
   const MotionCard = motion(Card);
   const context = useThemeUI();
@@ -45,8 +43,8 @@ const Process = () => {
           position: "relative",
           gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
           gap: 10,
-          width: [`unset`, `calc(100% + ${width}px)`],
-          mx: [`unset`, `${-width / 2}px`],
+          // width: `calc(100% + (99vw - 100%))`,
+          // mx: `calc((95vw - 100%) / 2)`,
           my: 11,
           "& > :nth-of-type(1)": { transform: "translateY(20%)" },
           "& > :nth-of-type(2)": { transform: "translateY(10%)" },

@@ -21,13 +21,13 @@ const carouselAnimation = (e) => {
 
 const ImagesCarousel = ({ image }) => {
   // console.log(image);
-  const width = window.innerWidth - 700;
+  const width = 500;
   return (
     <Box
       className="carousel"
       sx={{
-        width: [`unset`, `calc(100% + ${width}px)`],
-        mx: [`unset`, `${-width / 2}px`],
+        width: `calc(100% + (99vw - 100%))`,
+        mx: [`unset`, `calc((100% - 99vw) / 2)`],
         my: 11,
         justifyContent: "center",
         justifyItems: "center",

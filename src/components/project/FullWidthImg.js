@@ -5,19 +5,17 @@ import CardEffect from "../CardEffect";
 import CardEffectReset from "../CardEffectReset";
 
 const FullWidthImage = ({ children, image }) => {
-  const width = window.innerWidth - 700;
+  const width = 800;
 
   return (
     <Box
       as="figure"
-      onMouseMove={(e) => CardEffect(e, 0.1)}
-      onMouseOut={CardEffectReset}
       role="img"
       sx={{
         position: "relative",
-        width: ["unset", `calc(100% + ${width}px)`],
+        width: `calc(100% + (99vw - 100%))`,
         transition: "all 200ms ease-out",
-        mx: [`unset`, `${-width / 2}px`],
+        mx: `calc((100% - 99vw) / 2)`,
         my: 11,
         borderRadius: 2,
       }}

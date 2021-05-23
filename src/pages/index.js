@@ -1,20 +1,20 @@
 /** @jsx jsx */
-import React from "react";
 import { Box, Container, Flex, Grid, jsx, Link } from "theme-ui";
+import React from "react";
 import { Themed } from "@theme-ui/mdx";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import CardEffect from "../components/CardEffect";
 import ProjectCard from "../components/ProjectCard";
-import SEO from "../components/SEO";
+import Seo from "../components/SEO";
 import SlideUp from "../components/animation/SlideUp";
-import { Reveal, Tween } from "react-gsap";
+import { Tween } from "react-gsap";
 
 const IndexPage = ({ data }) => {
   // console.log(target);
 
   return (
     <>
-      <SEO title={`Home`} />
+      <Seo title={`Home`} />
 
       <Container
         as="section"
@@ -26,7 +26,6 @@ const IndexPage = ({ data }) => {
             fontSize: [48, 64],
             mb: 6,
             overflow: "hidden",
-            // backgroundColor: "background",
           }}
         >
           <SlideUp>

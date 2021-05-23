@@ -7,16 +7,10 @@ import CardEffectReset from "../CardEffectReset";
 import Header from "../Header";
 import { Timeline, Tween } from "react-gsap";
 
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
-import Splitting from "splitting";
-import gsap from "gsap";
-
 const Hero = (props) => {
   const { title, subtitle, tag, duration, role, tasks, hero, color } =
     props.heroData;
   const image = getImage(hero);
-  // console.log(props);
 
   return (
     <Flex
@@ -59,28 +53,7 @@ const Hero = (props) => {
               {subtitle}
             </Text>
           </Tween>
-          <Themed.h1
-            ref={(ref) => {
-              const result = Splitting({ target: ref, by: "lines" });
-              const tl = gsap.timeline({
-                delay: 0.2,
-              });
-              result[0]?.lines.map((item, index) => {
-                tl.from(
-                  item,
-                  {
-                    yPercent: 100,
-                    duration: 0.75,
-                    opacity: 0,
-                  },
-                  (index = 0 ? null : "<0.4")
-                );
-                return;
-              });
-            }}
-          >
-            {title}
-          </Themed.h1>
+          <Themed.h1>{title}</Themed.h1>
           {/* <Text
             as="p"
             sx={{ variant: "text.paragraph", fontSize: 1, color: "lightGray" }}

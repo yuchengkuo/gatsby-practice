@@ -1,17 +1,10 @@
 /** @jsx jsx */
-import { Flex, jsx, Text, useThemeUI } from "theme-ui";
-import { useState } from "react";
+import { Flex, jsx, Text } from "theme-ui";
 import { transparentize } from "@theme-ui/color";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Tween } from "react-gsap";
-import {
-  AnimatePresence,
-  AnimateSharedLayout,
-  motion,
-  useCycle,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -19,13 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 const MotionText = motion(Text);
 const MotionFlex = motion(Flex);
 
-const Menu = ({ tableOfContents }) => {
+const Menu = ({ tableOfContents, inView }) => {
   const heading = tableOfContents.items;
-
-  const [show, setShow] = useState(false);
-  document.addEventListener("scroll", () =>
-    window.pageYOffset > 960 ? setShow(true) : setShow(false)
-  );
 
   const box = {
     initial: { opacity: 0, x: -40 },
@@ -45,10 +33,11 @@ const Menu = ({ tableOfContents }) => {
         gap: 1,
         borderRadius: 2,
         boxShadow: "card",
+        display: [`none`, `flex`],
       }}
       variants={box}
       initial="initial"
-      animate={show ? "show" : "initial"}
+      animate={inView ? "show" : "initial"}
     >
       {heading?.map((item, index) => (
         <MotionText

@@ -4,7 +4,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
-import { Grid, Card, Container } from "@theme-ui/components";
+import { Grid } from "@theme-ui/components";
 
 // project components
 import Hero from "../components/project/Hero";
@@ -14,8 +14,9 @@ import InlineImage from "../components/project/InlineImage";
 import UpNext from "../components/project/UpNext";
 import Menu from "../components/project/Menu";
 
-import SEO from "../components/SEO";
+import Seo from "../components/SEO";
 import { useInView } from "react-intersection-observer";
+import GoToTop from "../components/GoToTop";
 
 const ProjectTemplate = ({ data }) => {
   // destructure data
@@ -51,7 +52,7 @@ const ProjectTemplate = ({ data }) => {
           variant="section"
           sx={{
             display: ["unset", "grid"],
-            gridTemplateColumns: ["1fr", "auto minmax(auto, 640px) auto"],
+            gridTemplateColumns: "auto minmax(auto, 640px) auto",
             gap: 0,
             "> *": {
               gridColumn: 2,
@@ -94,10 +95,12 @@ const ProjectTemplate = ({ data }) => {
     previous,
   };
 
+  const { ref, inView } = useInView({ threshold: 0.02 });
+
   return (
     <>
       {/* SEO */}
-      <SEO title={title} image={hero} />
+      <Seo title={title} image={hero} />
 
       {/* hero section */}
       <Hero heroData={heroData} />
@@ -105,10 +108,12 @@ const ProjectTemplate = ({ data }) => {
       <Menu
         tableOfContents={data.mdx.tableOfContents}
         headings={data.mdx.headings}
+        inView={inView}
       />
+      <GoToTop inView={inView} />
 
       {/* render context in mdx */}
-      <article sx={{ px: [7, "unset"] }}>
+      <article sx={{ px: [7, "unset"] }} ref={ref}>
         <Container>
           <MDXProvider components={components}>
             <MDXRenderer images={images}>{data.mdx.body}</MDXRenderer>
