@@ -2,10 +2,8 @@
 import { jsx, Themed } from "theme-ui";
 import { Box, Container, Flex, Grid, Text } from "@theme-ui/components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import CardEffect from "../CardEffect";
-import CardEffectReset from "../CardEffectReset";
 import Header from "../Header";
-import { Timeline, Tween } from "react-gsap";
+import { SplitWords, Timeline, Tween } from "react-gsap";
 
 const Hero = (props) => {
   const { title, subtitle, tag, duration, role, tasks, hero, color } =
@@ -53,7 +51,13 @@ const Hero = (props) => {
               {subtitle}
             </Text>
           </Tween>
-          <Themed.h1>{title}</Themed.h1>
+          <Themed.h1>
+            <Tween from={{ opacity: 0 }} stagger={0.1}>
+              <SplitWords wrapper={<div sx={{ display: "inline-block" }} />}>
+                {title}
+              </SplitWords>
+            </Tween>
+          </Themed.h1>
           {/* <Text
             as="p"
             sx={{ variant: "text.paragraph", fontSize: 1, color: "lightGray" }}
@@ -115,17 +119,12 @@ const Hero = (props) => {
       >
         <Box>
           <Grid
-            onMouseMove={(e) => CardEffect(e, 0.5)}
-            onMouseOut={CardEffectReset}
-            role="img"
             variant="shadows.card"
             sx={{
               boxShadow: `inset 0px 4px 0px #FBA34A`,
               variant: "container.wide",
               gridTemplateColumns: "repeat(3, minmax(240px, 1fr))",
-              overflow: "scroll",
-              scrollbarWidth: "thin",
-              "::-webkit-scrollbar": { height: 2 },
+              overflow: "auto",
               justifyItems: "stretch",
               justifyContent: "stretch",
               padding: [6, 6, 6],
