@@ -27,7 +27,7 @@ const ImagesCarousel = ({ image }) => {
       className="carousel"
       sx={{
         width: `calc(100% + (99vw - 100%))`,
-        mx: [`unset`, `calc((100% - 99vw) / 2)`],
+        mx: `calc((100% - 99vw) / 2)`,
         my: 11,
         justifyContent: "center",
         justifyItems: "center",
