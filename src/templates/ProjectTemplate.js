@@ -19,7 +19,6 @@ import { useInView } from "react-intersection-observer";
 import GoToTop from "../components/GoToTop";
 
 const ProjectTemplate = ({ data }) => {
-  // destructure data
   const {
     title,
     subtitle,
@@ -65,7 +64,6 @@ const ProjectTemplate = ({ data }) => {
     );
   };
 
-  // shorcodes
   const components = {
     FullWidth,
     Carousel,
@@ -95,7 +93,7 @@ const ProjectTemplate = ({ data }) => {
     previous,
   };
 
-  const { ref, inView } = useInView({ threshold: 0.02 });
+  const [articleRef, articleInView] = useInView({ rootMargin: "-450px 0px" });
 
   return (
     <>
@@ -108,12 +106,12 @@ const ProjectTemplate = ({ data }) => {
       <Menu
         tableOfContents={data.mdx.tableOfContents}
         headings={data.mdx.headings}
-        inView={inView}
+        inView={articleInView}
       />
-      <GoToTop inView={inView} />
+      <GoToTop inView={articleInView} />
 
       {/* render context in mdx */}
-      <article sx={{ px: [7, "unset"] }} ref={ref}>
+      <article sx={{ px: [7, "unset"] }} ref={articleRef}>
         <Container>
           <MDXProvider components={components}>
             <MDXRenderer images={images}>{data.mdx.body}</MDXRenderer>
