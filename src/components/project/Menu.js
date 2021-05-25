@@ -33,7 +33,7 @@ const Menu = ({ tableOfContents, inView }) => {
         gap: 1,
         borderRadius: 2,
         boxShadow: "card",
-        display: [`none`, `flex`],
+        display: [`none`, `none`, `flex`],
       }}
       variants={box}
       initial="initial"
