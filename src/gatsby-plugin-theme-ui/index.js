@@ -313,5 +313,9 @@ export default {
       py: -6,
       fontWeight: 300,
     },
+    hr: {
+      color: "background",
+      my: 100,
+    },
   },
 };
