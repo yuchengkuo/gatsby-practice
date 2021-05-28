@@ -9,6 +9,7 @@ import { Grid } from "@theme-ui/components";
 // project components
 import Hero from "../components/project/Hero";
 import FullWidth from "../components/project/FullWidthImg";
+import CustomWidth from "../components/project/CustomWidthImage";
 import Carousel from "../components/project/ImagesCarousel";
 import InlineImage from "../components/project/InlineImage";
 import UpNext from "../components/project/UpNext";
@@ -66,6 +67,7 @@ const ProjectTemplate = ({ data }) => {
 
   const components = {
     FullWidth,
+    CustomWidth,
     Carousel,
     InlineImage,
   };
