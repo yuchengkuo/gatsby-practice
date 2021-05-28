@@ -35,5 +35,15 @@ module.exports = {
       },
       __key: "projects",
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-R8P64RL9K2"],
+        pluginConfig: {
+          head: false,
+          exclude: [],
+        },
+      },
+    },
   ],
 };
