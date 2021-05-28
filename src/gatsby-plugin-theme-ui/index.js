@@ -1,5 +1,4 @@
 import { transparentize } from "@theme-ui/color";
-
 export default {
   colors: {
     text: "#E3E3E3",
