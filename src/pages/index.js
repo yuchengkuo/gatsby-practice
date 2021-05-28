@@ -6,48 +6,64 @@ import { graphql, Link as GatsbyLink } from "gatsby";
 import CardEffect from "../components/CardEffect";
 import ProjectCard from "../components/ProjectCard";
 import Seo from "../components/SEO";
-import SlideUp from "../components/animation/SlideUp";
-import { Tween } from "react-gsap";
+import { motion } from "framer-motion";
 
 const IndexPage = ({ data }) => {
-  // console.log(target);
-
+  const MotionBox = motion(Box);
+  const heroVariant = {
+    initial: {
+      y: `100%`,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        type: "spring",
+        damping: 20,
+      },
+    },
+  };
   return (
     <>
       <Seo title={`Home`} />
 
-      <Container
-        as="section"
-        variant="container.hero"
-        sx={{ overflow: "hidden", position: "relative" }}
-      >
+      <Container as="section" variant="container.hero">
         <Themed.h1
           sx={{
             fontSize: [48, 64],
             mb: 6,
-            overflow: "hidden",
           }}
         >
-          <SlideUp>
-            <Box>
+          <motion.div
+            initial="initial"
+            animate="show"
+            transition={{ staggerChildren: 0.3 }}
+          >
+            <MotionBox variants={heroVariant}>
               He<span sx={{ color: "primary" }}>&#47;&#47;</span>o,<br></br>
-            </Box>
-            <Box>
+            </MotionBox>
+            <MotionBox variants={heroVariant}>
               I'm YuCheng Kuo.<br></br>
-            </Box>
-            <Box>
-              Be nice and cool.<br></br>
-            </Box>
-          </SlideUp>
+            </MotionBox>
+            <MotionBox variants={heroVariant}>
+              Nice to see you.<br></br>
+            </MotionBox>
+          </motion.div>
         </Themed.h1>
-        <Tween from={{ yPercent: 30, opacity: 0, duration: 1, delay: 2 }}>
+        <MotionBox
+          initial={{ y: `30%`, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+        >
           <Themed.p>
             A self-taught UI/UX Designer, web developer and more.
           </Themed.p>
           <Themed.p sx={{ variant: "text.caption", fontSize: 0 }}>
-            SEE MY PROJECT
+            SCROLL FOR MORE
           </Themed.p>
-        </Tween>
+        </MotionBox>
       </Container>
 
       <Container as="section" id="project" variant="section">
@@ -130,13 +146,12 @@ const IndexPage = ({ data }) => {
           </Themed.h4>
           <Flex>
             <Link
-              as={GatsbyLink}
-              to="/"
+              href="mailto:hey@yuchengkuo.com?subject=Hi"
               variant="link.button"
               onMouseMove={CardEffect}
               sx={{ verticalAlign: "center" }}
             >
-              Send a message
+              Send a mail
             </Link>
           </Flex>
         </Box>

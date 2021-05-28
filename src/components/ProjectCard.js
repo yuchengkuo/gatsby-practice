@@ -13,17 +13,15 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
   const image = getImage(cover);
   const link = `${slug}`;
-
   const MotionLink = motion(Link);
+  const MotionBox = motion(Box);
   return (
     <MotionLink
       as={GatsbyLink}
       to={link}
       sx={{
-        "::after": { content: "none" },
         variant: "cards.project",
         overflow: "hidden",
-        transition: "all 250ms ease-out",
         textDecoration: "none",
       }}
       whileHover={{ scale: 1.02 }}
@@ -61,22 +59,19 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
         </Text>
       </Box>
 
-      <Box
+      <MotionBox
+        whileHover={{ scale: 1.03 }}
         sx={{
           position: "absolute",
           width: "100%",
           height: "100%",
           transition: "all 750ms ease-out",
-          ":hover": {
-            transform: "scale3d(1.03,1.03,1.03)",
-            zIndex: -2,
-          },
+          zIndex: -2,
           ".project-image": {
             position: "absolute",
             variant: "overlay.project",
             width: "100%",
             height: "100%",
-            zIndex: -2,
           },
         }}
       >
@@ -88,7 +83,7 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
           backgroundColor="#1d1e20"
           className="project-image"
         />
-      </Box>
+      </MotionBox>
     </MotionLink>
   );
 };

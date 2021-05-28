@@ -52,7 +52,7 @@ const Hero = (props) => {
             </Text>
           </Tween>
           <Themed.h1>
-            <Tween from={{ opacity: 0 }} stagger={0.1}>
+            <Tween from={{ yPercent: 30, opacity: 0 }} stagger={0.15}>
               <SplitWords wrapper={<div sx={{ display: "inline-block" }} />}>
                 {title}
               </SplitWords>

@@ -26,7 +26,7 @@ const Hero = ({ children }) => {
           }}
         >
           <StaticImage
-            src="../../images/why.jpg"
+            src="../../images/image01.jpg"
             alt=""
             placeholder="none"
             objectFit="cover"

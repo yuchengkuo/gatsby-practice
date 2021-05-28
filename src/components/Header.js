@@ -3,6 +3,7 @@ import { jsx } from "theme-ui";
 import { Flex, Link } from "@theme-ui/components";
 import { Link as GatsbyLink } from "gatsby";
 import { Tween } from "react-gsap";
+import { motion } from "framer-motion";
 
 const NavItem = [
   {
@@ -14,7 +15,7 @@ const NavItem = [
     title: "About",
   },
   {
-    slug: "/",
+    slug: "mailto:hey@yuchengkuo.com?subject=Hi",
     title: "Send a message",
   },
 ];
@@ -58,31 +59,36 @@ const LogoIcon = () => (
 );
 
 const Header = () => {
+  const MotinoFlex = motion(Flex);
   return (
-    <SlideDown>
-      <Flex as="header" sx={{ variant: "styles.header" }}>
-        <Link
-          as={GatsbyLink}
-          to="/"
-          sx={{ mb: [6, 0], "::after": { content: "none" } }}
-        >
-          <LogoIcon />
-        </Link>
+    <MotinoFlex
+      as="header"
+      sx={{ variant: "styles.header" }}
+      initial={{ y: `-20%`, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 2 }}
+    >
+      <Link
+        as={GatsbyLink}
+        to="/"
+        sx={{ mb: [6, 0], "::after": { content: "none" } }}
+      >
+        <LogoIcon />
+      </Link>
 
-        <Flex sx={{ alignItems: "center", gap: 9 }}>
-          {NavItem.map((item) => (
-            <Link
-              as={GatsbyLink}
-              key={item.slug}
-              to={item.slug}
-              variant="link.nav"
-            >
-              {item.title}
-            </Link>
-          ))}
-        </Flex>
+      <Flex sx={{ alignItems: "center", gap: 9 }}>
+        {NavItem.map((item) => (
+          <Link
+            as={GatsbyLink}
+            key={item.slug}
+            to={item.slug}
+            variant="link.nav"
+          >
+            {item.title}
+          </Link>
+        ))}
       </Flex>
-    </SlideDown>
+    </MotinoFlex>
   );
 };
 
