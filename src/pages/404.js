@@ -7,7 +7,7 @@ const NotFoundPage = () => {
   return (
     <Flex
       variant="container.wide"
-      sx={{ height: "60vh", flexDirection: "column", justifyContent: "center" }}
+      sx={{ height: "70vh", flexDirection: "column", justifyContent: "center" }}
     >
       <Themed.h1 sx={{ fontSize: 120 }}>404</Themed.h1>
       <Themed.p>No page found.</Themed.p>
