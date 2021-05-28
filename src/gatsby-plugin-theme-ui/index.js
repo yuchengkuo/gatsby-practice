@@ -315,6 +315,8 @@ export default {
     },
     hr: {
       color: "background",
+      borderColor: "background",
+      borderWidth: 0,
       my: 100,
     },
   },

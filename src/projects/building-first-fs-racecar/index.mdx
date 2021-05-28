@@ -38,9 +38,22 @@ images:
   - ./images/image-dev-6.jpg
   - ./images/image-dev-7.jpg
   - ./images/image-dev-8.jpg
+  - ./images/image-test-1.jpg
+  - ./images/image-test-2.jpg
+  - ./images/image-test-3.jpg
+  - ./images/image-test-4.jpg
+  - ./images/image-compete-1.jpg
+  - ./images/image-compete-2.jpg
+  - ./images/image-compete-3.jpg
+  - ./images/image-compete-4.jpg
+  - ./images/image-compete-5.jpg
+  - ./images/image-compete-6.jpg
+  - ./images/image-compete-7.jpg
+  - ./images/image-compete-8.jpg
   - ./images/image-ach-1.jpg
   - ./images/image-ach-2.jpg
   - ./images/image-ach-3.jpg
+  - ./images/image-con.jpg
 ---
 
 import Process from "./process";
@@ -96,32 +109,31 @@ There are two events in the competition, static event and dynamic event. Static 
 
 #### // Process
 
-This project took 12 months to build out the vehicle, and the overall timeline was research, design, develop, test and finally participate in the race, which consisted of different iterations and timeline for each sunbeam.
+This project took 12 months to build out the vehicle, and the overall timeline was research, design, develop, test and finally participate in the race, which consisted of different iterations and timeline for each subteam.
 
-<Process />
+---
 
 ###### 01
 
 ## Research
 
-We started with getting familiar with the competition and did some research about how an entry-year team should be aiming in the first attempt. From reading the [competition rules](#), learning from documentations, and looking for advice from experienced teams, the idea was to build up the necessary knowledge as soon as possible.
+We started with getting familiar with the competition and did some research about how an entry-year team should be aiming in the first attempt. From reading the [competition rules](link), learning from documentations, and looking for advice from experienced teams, **the idea was to build up the necessary knowledge as soon as possible.**
 
 ### Key Findings
 
-We learned that most of the team spent 1+ years for their first attempt, so setting an appropriate goal would be crucial for us. And **FS is usually viewed as a degree-level project, sometimes considered a standard by automobile industry for engineering students to transition from university to workspace.** As a student-centric event, safety is undoubtly the first consideration, therefore strictness of the inspection could be imagined, that is, it won’t be easy for first-year university and students.
+We learned that most of the team spent 1+ years for their first attempt, so setting an appropriate goal would be crucial for us. And **FS is usually viewed as a degree-level project, sometimes considered a standard by automobile industry for engineering students to transition from university to workspace.** As a student-centric event, safety is undoubtly the first concern, therefore strictness of the inspection could be imagined, that is, it won’t be easy for first-year university and students.
 
 ### Project Goal
 
-Realizing the project scope and the competition, we had a better picture of what this competition provides and why it has worldwide popularity, then moved on to define the project goal.
+Realizing the project scope and the competition, we then moved on to define the project goal.
 
-> Desgin and develop the first electric racecar to finish the static event. (Further to join the dynamic event if possible.)
+> **Desgin and develop the first electric racecar to finish the race.** (At least pass the static inspection.)
 
 ### The Challenge
 
 - Where does the resources (financial and material) come from?
 - How much resources do we need?
 - How to find members we need / team building?
-- What should we pay attention to first?
 
 > **Reach out & Look for help**
 
@@ -129,9 +141,9 @@ We first pitched this idea to the experienced and alumus, looking for advice and
 
 We recruited more members first from acquaintances, and then started building more presence through some campaigns (club festival, etc) to reach out to those with different background. It's a challenge to infect others when we had nothing but only passionate heart.
 
-Finally we spent time visiting other experienced team, [NTHU Racing](https://www.facebook.com/NTHU.Racing), [STUST Racing](https://www.facebook.com/ST.RacingTeam2005), and [Taipei Tech Racing](https://www.facebook.com/TaipeiTechRacing/). Actually seeing what they've built and listening to their stories really taught us a lot (and realized it's going to be tough.🤞🏼)
+**Finally we spent time visiting other experienced team**, [NTHU Racing](https://www.facebook.com/NTHU.Racing), [STUST Racing](https://www.facebook.com/ST.RacingTeam2005), and [Taipei Tech Racing](https://www.facebook.com/TaipeiTechRacing). Actually seeing what they've built and listening to their stories really taught us a lot (and realized it's going to be tough.🤞🏼)
 
-On the other hand, often time we found ourselves lost in sudden amout of information🤯, filtering and transforming them into future plans were what we managed to learned.
+On the other hand, often time we found ourselves lost in sudden amout of information🤯, filtering and transforming them into future plans were what we managed to learn.
 
 <Carousel
   image={[
@@ -141,7 +153,7 @@ On the other hand, often time we found ourselves lost in sudden amout of informa
     },
     {
       img: props.images[6],
-      caption: `Early meeting @ Feb 2018`,
+      caption: `Early meeting @ Sep 2018`,
     },
     {
       img: props.images[7],
@@ -160,18 +172,17 @@ On the other hand, often time we found ourselves lost in sudden amout of informa
 
 > This section will focus on frame design.
 
-I started the design process by reading other teams’ design documentations, tried to understand their process and take their final result as reference and inspiration. These were the questions I tried to answer when looking at their designs,
+I started the design process by reading other teams’ design documentations, and take their final result as reference and inspiration. These were the questions I tried to answer then,
 
 - Why do them design this way?
-- Identify constrains and advantages.
 - What’s good and potential improvements?
 - How's the results?
 
-Listing these questions out helped me understand what to focus and and prioritize top consideration for our case. Then I started do some sketches to get more acquainted with the frame structure and also ideate possible application. After that I began modeling using software (SolidWorks), revisited the process, made adjustments, then started over again. Few times of iterations quickly get me on track and move on to the bigger iteration with different subteams. Discussing, modifying and iterating became routine until the end of the design phase (technically it’s end of the season).
+Listing these questions out helped me understand the process and prioritize top considerations for our case. Then I started do some sketches to familiarize the frame structure and ideate possible applications. After that I began modeling using software (SolidWorks), revisited the process, made adjustments, then started over again. **Few times of iterations quickly got me on track and moved on to the bigger iteration with different subteams.** Discussing, modifying and iterating became routine until the end of the design phase (technically it’s end of the season).
 
 ### Design Goals
 
-With all the research findings, advices obtained and ideas come-up, the goals for frame design were set,
+With all the research findings, advices obtained and ideas come-up, the goals were set,
 
 1. Reduce complexity
 2. Compact space usage
@@ -187,23 +198,21 @@ With all the research findings, advices obtained and ideas come-up, the goals fo
 
 For me, **designing frame is more like figuring out a way to integrate all components onto vehicle with different subteams.** Therefore it’s essential to know the basic of the components on the car.
 
-We discussed frequently to keep everyone on the same page, and when there’s change or idea, it could be quickly implemented. Furthermore, it’s a must to understand why the modifications were needed and different subteams’ goals and constraints, almost always theirs were also one for frame in some way.
-
-Usually frame subteam was the first to take action in order to have the basic structure and then keep modifying until the end of the design phase, that is begin the first while finish the last.
+Frequent discussions kept everyone on the same page, and when there’s change or idea, it could be quickly implemented. Furthermore, it’s a must to understand why the modifications were needed and different subteams’ goals and constraints, almost always theirs were also one for frame in some way. In short, discuss the solutions, understand he needs.
 
 <Carousel
   image={[
     {
       img: props.images[9],
-      caption: `(Messy) initial sketches`,
+      caption: `Sketch about overall vehicle`,
     },
     {
       img: props.images[10],
-      caption: `some caption`,
+      caption: `Just some sketches`,
     },
     {
       img: props.images[11],
-      caption: `Whole car side view drawing`,
+      caption: `Whole vehicle side view drawing`,
     },
     {
       img: props.images[12],
@@ -218,13 +227,11 @@ Usually frame subteam was the first to take action in order to have the basic st
 
 (After countless design changes we finally made it to the development!🛠)
 
-The development process wasn’t at sync for every subteams and components on the vehicle, thus cooperation across the team was especially important. **For frame, the major tasks were material (steel tubes and sheet metal), pre-development preparation (tube end for welding, sheet metal bending), development (welding), and validation.** For most of the development process, lacking practical experience was a problem for us, apart from picking up the skills beforehand, collaboration with the industry is another strategy.
+The development process wasn’t at sync for every subteams and components on the vehicle, thus cooperation across the team was especially important. **For frame, the major tasks were material (steel tubes and sheet metal), pre-development preparation (tube end for welding, sheet metal bending), development (welding), and validation.** For most of the development process, lacking practical experience was a problem, apart from picking up the skills beforehand, collaboration with the industry was another strategy.
 
 ### Collaborate with the industry
 
 Reaching out to the industry and local corporations let us know practical applications being used right now. And we also learned that been designed and ready to develop are two things, there are many prerequisites like drawing, material, timeline confirmation before getting into development. **Working with the industry taught us more about professional workflow, and also started to understand the industry standards.** Really appreciate the assistance and advice every company gave!
-
-Note: At this time, we were facing competition documents to hand in, development process, final exams,🥲
 
 <Carousel
   image={[
@@ -251,8 +258,7 @@ Note: At this time, we were facing competition documents to hand in, development
 
 - How to solve problems that come up during development?
 - How to collaborate between different subteams?
-- How to coordinate when timeline collide?
-- Timeline delay?
+- Timeline delay & collision?
 
 > **Identify & Evaluate**
 
@@ -260,7 +266,7 @@ It could be said that it’s impossible not having problems when entering develo
 
 Timeline collaboration between different subteams was another lesson for us, well communication across the team played an important part, the key was to keep everyone in the situation so that development could keep moving forward.
 
-Also having a plan B is essential to make sure the development could continue with a backup even in the worst situation. (Well, better said than done, it’s more complicated than what we thought.)
+Also having a plan B is essential to make sure the development could continue with a backup even in the worst situation. (But better said than done, it’s more complicated than what we thought)
 
 <Carousel
   image={[
@@ -289,18 +295,36 @@ Also having a plan B is essential to make sure the development could continue wi
 
 The testing was not only for validation of our designs, but also for driver to get acquainted with the vehicle (even though the time is basically none). **We also ran through the competition items to make sure everything was ready and to let us know what to do when similar situations occur.**
 
-Before getting into the competition, teams have to submit a video of vehicle in operation, (Shakedown Certificate), in a way to make sure teams are ready for competition. We still vividly remembered the first time it moved after so many sleepless nights.
+Before getting into the competition, teams have to submit a video of vehicle in operation, (Shakedown Certificate), in a way to make sure teams are ready for competition.
 
 ### The Challenges
 
 - Looking for the testing site.
-- What items to test?
 - Procedure when problems occur.
 - Transportation to competition site.
 
-At this time the problems usually showed up suddenly, we must learn to react quickly and address accordingly. What we could do was trying to lower the chances and building a procedure to address the situation.
+**At this time the problems usually showed up suddenly, we must learn to react quickly and address accordingly.** What we could do was trying to lower the chances and building a procedure to address similar problems.
 
----
+<Carousel
+  image={[
+    {
+      img: props.images[21],
+      caption: `Vehicle transporting @ Jel 2019`,
+    },
+    {
+      img: props.images[22],
+      caption: `Shakedown certificate complete @ Aug 2019`,
+    },
+    {
+      img: props.images[23],
+      caption: `Final testing @ Aug 2019`,
+    },
+    {
+      img: props.images[24],
+      caption: `Final final test @ Aug 2019`,
+    },
+  ]}
+/>
 
 ###### 05
 
@@ -318,33 +342,73 @@ The most important things to consider was rule-compliance, safety, and communica
 
 We were stuck at the final check for electric system, we couldn’t find the cause for the problems. Therefore we lost the chance to finish the dynamic event. It’s really a pity for us not be able to join the dynamic event. Though, we still passed the inspection using the rest of the competition, which can be seen as a qualification for all of us.
 
+<Carousel
+  image={[
+    {
+      img: props.images[25],
+      caption: `Battery cells assembly @ `,
+    },
+    {
+      img: props.images[26],
+      caption: `Working hard at pit`,
+    },
+    {
+      img: props.images[27],
+      caption: `Technical inspection`,
+    },
+    {
+      img: props.images[28],
+      caption: `Vehicle cost event`,
+    },
+  ]}
+/>
+
 For the last 2 days, apart from enjoying the dynamic event🏎️, we also spent lots of time learning from the judges and other teams. It was brilliant to find so many passionate hearts and be able to share experiences and thoughts about the competition with each other. Besides, we grab the chance to chat with the design judges, we were so glad that some designs were recognized for a first year electric team, and it clearly showed us what could be achieved with the effort from both industry and academic.
 
 Note: For 27 EVs, 11 passed the inspection, 9 joined the dynamic event, 7 finished the race, e ended up 13 out of 27. More information about the completion results can be found [here](jsae).
 
----
+<Carousel
+  image={[
+    {
+      img: props.images[29],
+      caption: `Brake test`,
+    },
+    {
+      img: props.images[30],
+      caption: `Driver test`,
+    },
+    {
+      img: props.images[31],
+      caption: `Tilt test`,
+    },
+    {
+      img: props.images[32],
+      caption: `Rain test`,
+    },
+  ]}
+/>
 
 #### // Results
 
 ## Achievements
 
-<InlineImage image={props.images[21]} />
+<InlineImage image={props.images[33]} />
 
 ### First FS racecar built in NCKU
 
 Developed the first electric FS vehicle in NCKU, and lead to participate the competition for the first time.
 
-<InlineImage image={props.images[22]} />
+<InlineImage image={props.images[34]} />
 
 ### Second team to pass the static event for electric class
 
-We are the second team to pass the inspection for electric class in Taiwan, while it’s such a pity we couldn’t finish the race.
+We are the second team to pass the inspection for electric class in Taiwan. It’s a pity we couldn’t finish the race.
 
-<InlineImage image={props.images[23]} />
+<InlineImage image={props.images[35]} />
 
 ### Establishment of a multidisciplinary team
 
-Diversity and teamwork are two beliefs in the team, which can move towards wider aspects in the future.
+Diversity and teamwork are two beliefs in the team, which can lead us towards wider aspects in the future.
 
 ---
 
@@ -352,29 +416,29 @@ Diversity and teamwork are two beliefs in the team, which can move towards wider
 
 ### Self-education
 
-The knowledge and tool were mostly new (or unfamiliar) to us, thus learning by ourselves became basic skill we must have. It can be said that learning is one of the core reasons this project exists.
+The knowledge and tool were mostly new (or unfamiliar) to us, thus learning by ourselves became basic skill we must have. It can be said that **learning is one of the core reasons this project exists.**
 
 ### Cross-division collaboration
 
-It’s impossible to have these great achievements without teamwork,
-
-Members with different backgrounds
-
-Make the conversations effective
+It’s impossible to have these great achievements without teamwork, collaboration between members with different backgrounds
 
 ### Problems solving techniques
 
 The whole journey in this project was full of problems, not only technically but also team operational and many more. This is the lesson that I feel the most after the season ended.
 
----
+<CustomWidth image={props.images[36]} width={"60vw"}>
+  Team Taiwan
+</CustomWidth>
 
 ## Conclusion & Next Step
 
-在大學期間學習到最多東西的時期
-最全神貫注的時期
-專案運作的過程，更認識自己
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus, nisl eget tincidunt luctus, lectus odio dictum purus, in vehicula nibh eros sed odio. Nullam semper id tortor ac dapibus. Duis rutrum metus lacinia porttitor tincidunt. Nulla facilisi. Suspendisse tristique non ipsum vitae facilisis. In nec ante pretium, elementum arcu eu, varius orci. Proin libero arcu, cursus eget turpis in, sodales fringilla odio. Sed pharetra tempor felis, in viverra nisi.
 
-### Reference Links
+Praesent facilisis dolor ligula, eu hendrerit orci tempus sed. Nulla eget lacus odio. Donec a mattis nisi. Pellentesque efficitur neque tincidunt ipsum dapibus, sit amet finibus velit tincidunt. Nullam aliquet purus ipsum, ac mollis sem suscipit non. Duis semper eget enim pellentesque faucibus. Duis quis nibh ac eros pretium laoreet. Mauris a rhoncus risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean viverra nibh est, et tincidunt nisi rhoncus sit amet. Nulla facilisi.
+
+---
+
+### Some Links
 
 [NCKU Formula Racing Team](facebook)
 

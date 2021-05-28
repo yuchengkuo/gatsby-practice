@@ -1,54 +1,26 @@
-import * as React from "react"
-import { Link } from "gatsby"
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+/** @jsx jsx */
+import { Box, Flex, jsx, Link, Themed } from "theme-ui";
+import { Link as GatsbyLInk } from "gatsby";
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <Flex
+      variant="container.wide"
+      sx={{ height: "60vh", flexDirection: "column", justifyContent: "center" }}
+    >
+      <Themed.h1 sx={{ fontSize: 120 }}>404</Themed.h1>
+      <Themed.p>No page found.</Themed.p>
+      <Link
+        as={GatsbyLInk}
+        to="/"
+        variant="link.button"
+        sx={{ flexGrow: "unset", width: "50%" }}
+      >
+        Head back to home.
+      </Link>
+    </Flex>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

@@ -7,11 +7,11 @@ const SharePanel = ({ children }) => {
     <Container variant="container.wide" sx={{ variant: "section" }}>
       {children}
 
-      <StaticImage src="../images/image01.jpg" alt="" />
-      <StaticImage src="../images/image 2.jpg" alt="" />
-      <StaticImage src="../images/image 3.jpg" alt="" />
-      <StaticImage src="../images/image 4.jpg" alt="" />
-      <StaticImage src="../images/image 5.jpg" alt="" />
+      <StaticImage src="../../images/image01.jpg" alt="" />
+      <StaticImage src="../../images/image 2.jpg" alt="" />
+      <StaticImage src="../../images/image 3.jpg" alt="" />
+      <StaticImage src="../../images/image 4.jpg" alt="" />
+      <StaticImage src="../../images/image 5.jpg" alt="" />
     </Container>
   );
 };
