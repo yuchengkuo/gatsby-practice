@@ -1,3 +1,16 @@
 node_modules/
+*.sketch
+*.fig
+
+# gatsby file
 .cache/
 public
+
+# dotenv environment variable files
+.env*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
