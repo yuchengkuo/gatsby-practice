@@ -5,18 +5,21 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { Grid } from "@theme-ui/components";
+import { useInView } from "react-intersection-observer";
 
 // project components
-import Hero from "../components/project/Hero";
-import FullWidth from "../components/project/FullWidthImg";
-import CustomWidth from "../components/project/CustomWidthImage";
-import Carousel from "../components/project/ImagesCarousel";
-import InlineImage from "../components/project/InlineImage";
-import UpNext from "../components/project/UpNext";
-import Menu from "../components/project/Menu";
+import {
+  Hero,
+  FullWidth,
+  CustomWidth,
+  Carousel,
+  InlineImage,
+  UpNext,
+  Menu,
+  UnderConstruction,
+} from "../components/project";
 
 import Seo from "../components/SEO";
-import { useInView } from "react-intersection-observer";
 import GoToTop from "../components/GoToTop";
 
 const ProjectTemplate = ({ data }) => {
@@ -70,6 +73,7 @@ const ProjectTemplate = ({ data }) => {
     CustomWidth,
     Carousel,
     InlineImage,
+    UnderConstruction,
   };
 
   // data for upnext section
@@ -95,7 +99,8 @@ const ProjectTemplate = ({ data }) => {
     previous,
   };
 
-  const [articleRef, articleInView] = useInView({ rootMargin: "-450px 0px" });
+  const [articleRef, articleInView] = useInView({ rootMargin: "-200px 0px" });
+  // console.log(articleInView);
 
   return (
     <>
