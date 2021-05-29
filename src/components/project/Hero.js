@@ -3,12 +3,12 @@ import { jsx, Themed } from "theme-ui";
 import { Box, Container, Flex, Grid, Text } from "@theme-ui/components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Header from "../Header";
-import { SplitWords, Timeline, Tween } from "react-gsap";
+import { SplitWords } from "react-gsap";
 import { motion } from "framer-motion";
 
 const Hero = (props) => {
-  const { title, subtitle, tag, duration, role, tasks, hero, color } =
-    props.heroData;
+  // unsed data: tag color
+  const { title, subtitle, duration, role, tasks, hero } = props.heroData;
   const image = getImage(hero);
   const MotionBox = motion(Box);
   const titleVariant = {

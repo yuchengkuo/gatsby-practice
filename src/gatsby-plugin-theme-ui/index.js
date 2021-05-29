@@ -1,6 +1,6 @@
 import { transparentize } from "@theme-ui/color";
 import "../../static/fonts/Sora[wght].woff2";
-export default {
+const theme = {
   colors: {
     text: "#E3E3E3",
     background: "#18191B",
@@ -321,3 +321,5 @@ export default {
     },
   },
 };
+
+export default theme;

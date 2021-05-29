@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { transparentize } from "@theme-ui/color";
-import { Flex, jsx, Themed } from "theme-ui";
+import { Flex, jsx } from "theme-ui";
 
 const UnderConstruction = () => {
   return (

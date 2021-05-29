@@ -21,7 +21,6 @@ const carouselAnimation = (e) => {
 
 const ImagesCarousel = ({ image }) => {
   // console.log(image);
-  const width = 500;
   return (
     <Box
       className="carousel"

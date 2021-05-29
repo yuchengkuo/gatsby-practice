@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { Box, Container, Flex, Grid, jsx, Link } from "theme-ui";
-import React from "react";
 import { Themed } from "@theme-ui/mdx";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import CardEffect from "../components/CardEffect";
@@ -26,7 +25,7 @@ const IndexPage = ({ data }) => {
     },
   };
   return (
-    <>
+    <main>
       <Seo title={`Home`} />
 
       <Container as="section" variant="container.hero">
@@ -156,7 +155,7 @@ const IndexPage = ({ data }) => {
           </Flex>
         </Box>
       </Container>
-    </>
+    </main>
   );
 };
 

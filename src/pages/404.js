@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Flex, jsx, Link, Themed } from "theme-ui";
+import { Flex, jsx, Link, Themed } from "theme-ui";
 import { Link as GatsbyLInk } from "gatsby";
 
 // markup
@@ -15,7 +15,7 @@ const NotFoundPage = () => {
         as={GatsbyLInk}
         to="/"
         variant="link.button"
-        sx={{ flexGrow: "unset", width: "50%" }}
+        sx={{ flexGrow: "unset", width: "55%" }}
       >
         Head back to home.
       </Link>

@@ -2,7 +2,6 @@
 import { jsx } from "theme-ui";
 import { Flex, Link } from "@theme-ui/components";
 import { Link as GatsbyLink } from "gatsby";
-import { Tween } from "react-gsap";
 import { motion } from "framer-motion";
 
 const NavItem = [

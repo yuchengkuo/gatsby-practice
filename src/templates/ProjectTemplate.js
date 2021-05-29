@@ -25,7 +25,7 @@ const ProjectTemplate = ({ data }) => {
   const {
     title,
     subtitle,
-    slug,
+    //slug,
     tag,
     duration,
     role,
