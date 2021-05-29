@@ -1,8 +1,8 @@
 {
-  "name": "website",
+  "name": "yuchengkuo-website",
   "version": "1.0.0",
   "private": true,
-  "description": "website",
+  "description": "yuchengkuo-website",
   "keywords": [
     "gatsby"
   ],
