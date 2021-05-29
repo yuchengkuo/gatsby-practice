@@ -32,7 +32,7 @@ const Footer = () => {
       sx={{
         variant: "container.wide",
         flexDirection: ["column", "row"],
-        rowGap: 2,
+        gap: 2,
         alignItems: ["center", "flex-end"],
         mt: 7,
         pb: 5,

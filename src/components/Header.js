@@ -57,7 +57,7 @@ const Header = () => {
         <LogoIcon />
       </Link>
 
-      <Flex sx={{ alignItems: "center", rowGap: 9 }}>
+      <Flex sx={{ alignItems: "center", gap: 9 }}>
         {NavItem.map((item) => (
           <Link
             as={GatsbyLink}

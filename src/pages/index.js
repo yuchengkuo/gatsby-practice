@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => {
             sx={{
               gap: 8,
               "@media (min-width: 800px)": {
-                gridRowGap: "0",
+                rowGap: "0",
                 gridTemplateColumns: "1fr 1fr",
                 a: {
                   "&:nth-of-type(1)": {
@@ -118,7 +118,7 @@ const IndexPage = ({ data }) => {
             nesciunt adipisci tempore? Ullam necessitatibus autem, consequuntur
             temporibus nulla sit. Fugit, deserunt!
           </Themed.p>
-          <Flex sx={{ rowGap: 4 }}>
+          <Flex sx={{ gap: 4 }}>
             <Link
               as={GatsbyLink}
               to="/about"

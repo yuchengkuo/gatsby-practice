@@ -1,5 +1,5 @@
 import { transparentize } from "@theme-ui/color";
-export default {
+export default theme = {
   colors: {
     text: "#E3E3E3",
     background: "#18191B",
@@ -9,8 +9,8 @@ export default {
     darkGray: "#3B3C40",
   },
   fonts: {
-    body: '"Sora", sans-serif',
-    heading: '"Sora", sans-serif',
+    body: "Sora, sans-serif",
+    heading: "Sora, sans-serif",
   },
   breakpoints: ["700px", "1300px", "2000px"],
   space: [0, 4, 8, 12, 16, 20, 24, 36, 40, 48, 64, 200],
