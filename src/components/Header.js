@@ -14,10 +14,6 @@ const NavItem = [
     slug: "/about",
     title: "About",
   },
-  {
-    slug: "mailto:hey@yuchengkuo.com?subject=Hi",
-    title: "Send a message",
-  },
 ];
 
 const LogoIcon = () => (
@@ -68,6 +64,13 @@ const Header = () => {
             {item.title}
           </Link>
         ))}
+        <Link
+          as={GatsbyLink}
+          href="mailto:hey@yuchengkuo.com?subject=Hi"
+          variant="link.nav"
+        >
+          Send a mail
+        </Link>
       </Flex>
     </MotinoFlex>
   );

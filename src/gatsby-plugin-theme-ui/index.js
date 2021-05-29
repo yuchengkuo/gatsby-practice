@@ -1,4 +1,5 @@
 import { transparentize } from "@theme-ui/color";
+import "../../static/fonts/Sora[wght].woff2";
 export default {
   colors: {
     text: "#E3E3E3",
