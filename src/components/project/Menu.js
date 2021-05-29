@@ -3,11 +3,9 @@ import { Flex, jsx, Text } from "theme-ui";
 import { transparentize } from "@theme-ui/color";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollToPlugin);
-gsap.registerPlugin(ScrollTrigger);
 
 const MotionText = motion(Text);
 const MotionFlex = motion(Flex);

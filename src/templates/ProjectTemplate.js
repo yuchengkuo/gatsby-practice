@@ -1,6 +1,5 @@
 /**  @jsx jsx */
 import { jsx } from "theme-ui";
-import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
@@ -49,22 +48,20 @@ const ProjectTemplate = ({ data }) => {
 
   const Container = ({ children }) => {
     return (
-      <>
-        <Grid
-          as="article"
-          variant="section"
-          sx={{
-            display: ["unset", "grid"],
-            gridTemplateColumns: "auto minmax(auto, 640px) auto",
-            gap: 0,
-            "> *": {
-              gridColumn: 2,
-            },
-          }}
-        >
-          {children}
-        </Grid>
-      </>
+      <Grid
+        as="article"
+        variant="section"
+        sx={{
+          display: ["unset", "grid"],
+          gridTemplateColumns: "auto minmax(auto, 640px) auto",
+          gap: 0,
+          "> *": {
+            gridColumn: 2,
+          },
+        }}
+      >
+        {children}
+      </Grid>
     );
   };
 
@@ -99,11 +96,12 @@ const ProjectTemplate = ({ data }) => {
     previous,
   };
 
-  const [articleRef, articleInView] = useInView({ rootMargin: "-200px 0px" });
-  // console.log(articleInView);
+  const { ref, inView } = useInView({
+    rootMargin: "-200px 0px",
+  });
 
   return (
-    <>
+    <main>
       {/* SEO */}
       <Seo title={title} image={hero} />
 
@@ -113,12 +111,12 @@ const ProjectTemplate = ({ data }) => {
       <Menu
         tableOfContents={data.mdx.tableOfContents}
         headings={data.mdx.headings}
-        inView={articleInView}
+        inView={inView}
       />
-      <GoToTop inView={articleInView} />
+      <GoToTop inView={inView} />
 
       {/* render context in mdx */}
-      <article sx={{ px: [7, "unset"] }} ref={articleRef}>
+      <article sx={{ px: [7, "unset"] }} ref={ref}>
         <Container>
           <MDXProvider components={components}>
             <MDXRenderer images={images}>{data.mdx.body}</MDXRenderer>
@@ -128,7 +126,7 @@ const ProjectTemplate = ({ data }) => {
 
       {/* upNext section */}
       <UpNext upNextData={upNextData} />
-    </>
+    </main>
   );
 };
 
