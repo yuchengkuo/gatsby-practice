@@ -46,7 +46,7 @@ const ProjectTemplate = ({ data }) => {
     color,
   };
 
-  const Container = ({ children }) => {
+  const GridContainer = ({ children }) => {
     return (
       <Grid
         as="article"
@@ -117,11 +117,11 @@ const ProjectTemplate = ({ data }) => {
 
       {/* render context in mdx */}
       <article sx={{ px: [7, "unset"] }} ref={ref}>
-        <Container>
+        <GridContainer>
           <MDXProvider components={components}>
             <MDXRenderer images={images}>{data.mdx.body}</MDXRenderer>
           </MDXProvider>
-        </Container>
+        </GridContainer>
       </article>
 
       {/* upNext section */}

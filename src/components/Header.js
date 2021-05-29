@@ -39,39 +39,38 @@ const LogoIcon = () => (
 );
 
 const Header = () => {
-  const MotinoFlex = motion(Flex);
   return (
-    <MotinoFlex
-      as="header"
-      sx={{ variant: "styles.header" }}
+    <motion.div
       initial={{ y: `-20%`, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 2 }}
     >
-      <Link as={GatsbyLink} to="/" sx={{ mb: [6, 0] }}>
-        <LogoIcon />
-      </Link>
+      <Flex as="header" sx={{ variant: "styles.header" }}>
+        <Link as={GatsbyLink} to="/" sx={{ mb: [6, 0] }}>
+          <LogoIcon />
+        </Link>
 
-      <Flex sx={{ alignItems: "center", gap: 9 }}>
-        {NavItem.map((item) => (
+        <Flex sx={{ alignItems: "center", gap: 9 }}>
+          {NavItem.map((item) => (
+            <Link
+              as={GatsbyLink}
+              key={item.slug}
+              to={item.slug}
+              variant="link.nav"
+            >
+              {item.title}
+            </Link>
+          ))}
           <Link
             as={GatsbyLink}
-            key={item.slug}
-            to={item.slug}
+            href="mailto:hey@yuchengkuo.com?subject=Hi"
             variant="link.nav"
           >
-            {item.title}
+            Send a mail
           </Link>
-        ))}
-        <Link
-          as={GatsbyLink}
-          href="mailto:hey@yuchengkuo.com?subject=Hi"
-          variant="link.nav"
-        >
-          Send a mail
-        </Link>
+        </Flex>
       </Flex>
-    </MotinoFlex>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui";
-import { Box, Container, Flex, Grid, Text } from "@theme-ui/components";
+import { Box, Container, Flex, Text, Grid } from "@theme-ui/components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Header from "../Header";
 import { SplitWords } from "react-gsap";
@@ -39,7 +39,7 @@ const Hero = (props) => {
       </Container>
 
       <Container variant="container.wide">
-        <MotionBox
+        <motion.div
           initial={{ y: `30%`, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
@@ -54,9 +54,9 @@ const Hero = (props) => {
           >
             {subtitle}
           </Text>
-        </MotionBox>
+        </motion.div>
         <Themed.h1>
-          <MotionBox
+          <motion.div
             initial="initial"
             animate="show"
             transition={{ staggerChildren: 0.1 }}
@@ -71,7 +71,7 @@ const Hero = (props) => {
             >
               {title}
             </SplitWords>
-          </MotionBox>
+          </motion.div>
         </Themed.h1>
         {/* <Text
             as="p"
@@ -81,35 +81,38 @@ const Hero = (props) => {
           </Text> */}
       </Container>
 
-      <MotionBox
+      <motion.div
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2, duration: 1.5 }}
-        sx={{
-          position: "absolute",
-          width: "full",
-          height: "95%",
-          top: "0",
-          zIndex: "-1",
-          ".image": {
+      >
+        <MotionBox
+          sx={{
             position: "absolute",
             width: "full",
-            height: "full",
-            variant: "overlay.hero",
-          },
-        }}
-      >
-        <GatsbyImage
-          image={image}
-          alt={title}
-          className="image"
-          objectFit="cover"
-          backgroundColor="#1d1e20"
-          loading="eager"
-        />
-      </MotionBox>
+            height: "95%",
+            top: "0",
+            zIndex: "-1",
+            ".image": {
+              position: "absolute",
+              width: "full",
+              height: "full",
+              variant: "overlay.hero",
+            },
+          }}
+        >
+          <GatsbyImage
+            image={image}
+            alt={title}
+            className="image"
+            objectFit="cover"
+            backgroundColor="#1d1e20"
+            loading="eager"
+          />
+        </MotionBox>
+      </motion.div>
 
-      <MotionBox
+      <motion.div
         initial={{ y: `50%`, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 2, duration: 1.5 }}
@@ -156,7 +159,7 @@ const Hero = (props) => {
             ))}
           </Box>
         </Grid>
-      </MotionBox>
+      </motion.div>
     </Flex>
   );
 };
