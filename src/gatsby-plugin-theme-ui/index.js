@@ -1,5 +1,5 @@
 import { transparentize } from "@theme-ui/color";
-export default theme = {
+export default {
   colors: {
     text: "#E3E3E3",
     background: "#18191B",
