@@ -32,7 +32,6 @@ const Footer = () => {
       sx={{
         variant: "container.wide",
         flexDirection: ["column", "row"],
-        gap: 2,
         alignItems: ["center", "flex-end"],
         mt: 7,
         pb: 5,
@@ -41,7 +40,7 @@ const Footer = () => {
       <Link to="/">
         <LogoIcon />
       </Link>
-      <h5 sx={{ fontSize: 0, color: "gray", m: 0 }}>
+      <h5 sx={{ fontSize: 0, color: "gray", m: 0, ml: 2 }}>
         yucheng kuo &copy; 2021-
       </h5>
     </Flex>
