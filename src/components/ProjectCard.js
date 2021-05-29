@@ -25,7 +25,7 @@ const ProjectCard = ({ cover, title, tag, slug, badge, color }) => {
         textDecoration: "none",
       }}
       whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.94 }}
     >
       {badge?.show && (
         <Badge
