@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
               I'm YuCheng Kuo.<br></br>
             </MotionBox>
             <MotionBox variants={heroVariant}>
-              Nice to see you.<br></br>
+              Nice to meet you.<br></br>
             </MotionBox>
           </motion.div>
         </Themed.h1>
@@ -118,7 +118,7 @@ const IndexPage = ({ data }) => {
             nesciunt adipisci tempore? Ullam necessitatibus autem, consequuntur
             temporibus nulla sit. Fugit, deserunt!
           </Themed.p>
-          <Flex sx={{ gap: 4 }}>
+          <Flex sx={{ rowGap: 4 }}>
             <Link
               as={GatsbyLink}
               to="/about"
