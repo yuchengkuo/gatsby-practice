@@ -9,8 +9,8 @@ export default {
     darkGray: "#3B3C40",
   },
   fonts: {
-    body: "Sora",
-    heading: "Sora",
+    body: "Sora, san-serif",
+    heading: "Sora, san-serif",
   },
   breakpoints: ["700px", "1300px", "2000px"],
   space: [0, 4, 8, 12, 16, 20, 24, 36, 40, 48, 64, 200],
