@@ -20,21 +20,6 @@ const NavItem = [
   },
 ];
 
-const SlideDown = ({ children }) => {
-  return (
-    <Tween
-      from={{
-        yPercent: -20,
-        opacity: 0,
-        delay: 2,
-        ease: "power4.out",
-      }}
-    >
-      {children}
-    </Tween>
-  );
-};
-
 const LogoIcon = () => (
   <svg
     width="32"
@@ -68,15 +53,11 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 2 }}
     >
-      <Link
-        as={GatsbyLink}
-        to="/"
-        sx={{ mb: [6, 0], "::after": { content: "none" } }}
-      >
+      <Link as={GatsbyLink} to="/" sx={{ mb: [6, 0] }}>
         <LogoIcon />
       </Link>
 
-      <Flex sx={{ alignItems: "center", gap: 9 }}>
+      <Flex sx={{ alignItems: "center", rowGap: 9 }}>
         {NavItem.map((item) => (
           <Link
             as={GatsbyLink}

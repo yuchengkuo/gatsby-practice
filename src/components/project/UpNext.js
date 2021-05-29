@@ -14,7 +14,7 @@ const Divider = () => {
           textAlign: "center",
           alignItems: "center",
           justifyContent: "center",
-          gap: 8,
+          rowGap: 8,
         }}
       >
         <span>&#47;</span>

@@ -64,8 +64,8 @@ const GoToTop = ({ inView }) => {
       {inView && (
         <MotionBox
           as="button"
-          initial={{ y: `120%` }}
-          animate={{ y: 0 }}
+          initial={{ y: `120%`, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           exit={{ y: `120%`, opacity: 0 }}
           variants={variant}
           whileHover="hover"

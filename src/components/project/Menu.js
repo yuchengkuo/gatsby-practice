@@ -28,7 +28,7 @@ const Menu = ({ tableOfContents, inView }) => {
         width: 260,
         p: 5,
         flexDirection: "column",
-        gap: 1,
+        columnGap: 1,
         borderRadius: 2,
         boxShadow: "card",
         display: [`none`, `none`, `flex`],
