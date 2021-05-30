@@ -34,7 +34,7 @@ const Footer = () => {
         flexDirection: ["column", "row"],
         alignItems: ["center", "flex-end"],
         mt: 7,
-        pb: 5,
+        pb: 7,
       }}
     >
       <Link to="/">

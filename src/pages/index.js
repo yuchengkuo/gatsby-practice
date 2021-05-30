@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
             nesciunt adipisci tempore? Ullam necessitatibus autem, consequuntur
             temporibus nulla sit. Fugit, deserunt!
           </Themed.p>
-          <Flex sx={{ gap: 4 }}>
+          <Flex sx={{ mr: -4, ">*": { mr: 4 } }}>
             <Link
               as={GatsbyLink}
               to="/about"
@@ -128,7 +128,7 @@ const IndexPage = ({ data }) => {
             </Link>
             <Link
               as={GatsbyLink}
-              to="/resume"
+              to="/"
               variant="link.button"
               onMouseMove={CardEffect}
             >
