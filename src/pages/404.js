@@ -10,7 +10,7 @@ const NotFoundPage = () => {
       sx={{ height: "70vh", flexDirection: "column", justifyContent: "center" }}
     >
       <Themed.h1 sx={{ fontSize: 120 }}>404</Themed.h1>
-      <Themed.p>No page found.</Themed.p>
+      <Themed.p>Page not found.</Themed.p>
       <Link
         as={GatsbyLInk}
         to="/"
