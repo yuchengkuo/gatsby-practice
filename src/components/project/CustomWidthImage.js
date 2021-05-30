@@ -9,9 +9,17 @@ const CustomWidthImage = ({ children, image, width }) => {
       role="img"
       sx={{
         position: "relative",
-        width: `calc(100% + (${width} - 100%))`,
+        width: [
+          `calc(100% + (99vw - 100%))`,
+          `calc(100% + (99vw - 100%))`,
+          `calc(100% + (${width} - 100%))`,
+        ],
         transition: "all 200ms ease-out",
-        mx: `calc((100% - ${width}) / 2)`,
+        mx: [
+          `calc((100% - 99vw) / 2)`,
+          `calc((100% - 99vw) / 2)`,
+          `calc((100% - ${width}) / 2)`,
+        ],
         my: 11,
         borderRadius: 2,
       }}
