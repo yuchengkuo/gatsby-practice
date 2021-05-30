@@ -23,14 +23,14 @@ const Hero = ({ children }) => {
           },
         }}
       >
-        <StaticImage
+        {/* <StaticImage
           src="../../images/image01.jpg"
           alt=""
           placeholder="none"
           objectFit="cover"
           height={1000}
           loading="eager"
-        />
+        /> */}
       </Box>
       <Flex sx={{ flexDirection: "column", justifyContent: "center" }}>
         {children}
