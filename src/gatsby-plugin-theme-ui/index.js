@@ -1,5 +1,4 @@
 import { transparentize } from "@theme-ui/color";
-import "../../static/fonts/Sora[wght].woff2";
 const theme = {
   colors: {
     text: "#E3E3E3",
