@@ -97,7 +97,7 @@ const ProjectTemplate = ({ data }) => {
   };
 
   const { ref, inView } = useInView({
-    rootMargin: "-200px 0px",
+    rootMargin: "-250px 0px",
   });
 
   return (

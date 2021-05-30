@@ -10,7 +10,6 @@ const Hero = (props) => {
   // unsed data: tag color
   const { title, subtitle, duration, role, tasks, hero } = props.heroData;
   const image = getImage(hero);
-  const MotionBox = motion(Box);
   const titleVariant = {
     initial: {
       y: `50%`,
@@ -27,11 +26,13 @@ const Hero = (props) => {
         position: "relative",
         width: "100%",
         height: "100vh",
-        maxHeight: "1200px",
-        maxWidth: "2400px",
+        minHeight: 850,
+        maxHeight: 1200,
+        maxWidth: 2400,
         flexDirection: "column",
         justifyContent: "space-between",
         overflow: "hidden",
+        mb: [11],
       }}
     >
       <Container variant="container.wide" sx={{ px: [0, 0, 0] }}>
@@ -85,14 +86,18 @@ const Hero = (props) => {
         initial={{ opacity: 0, scale: 1.05 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2, duration: 1.5 }}
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "95%",
+          zIndex: -1,
+        }}
       >
-        <MotionBox
+        <Box
           sx={{
             position: "absolute",
             width: "full",
             height: "95%",
-            top: "0",
-            zIndex: "-1",
             ".image": {
               position: "absolute",
               width: "full",
@@ -109,7 +114,7 @@ const Hero = (props) => {
             backgroundColor="#1d1e20"
             loading="eager"
           />
-        </MotionBox>
+        </Box>
       </motion.div>
 
       <motion.div
