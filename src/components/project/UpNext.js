@@ -14,7 +14,7 @@ const Divider = () => {
           textAlign: "center",
           alignItems: "center",
           justifyContent: "center",
-          ">*": { mr: 8 },
+          "> *": { mr: 8 },
         }}
       >
         <span>&#47;</span>
@@ -38,7 +38,7 @@ const UpNext = ({ upNextData }) => {
             mr: -8,
             minHeight: 360,
             flexDirection: ["column", "row"],
-            ">*": { mr: 8 },
+            "> *": { mr: 8 },
           }}
         >
           <ProjectCard
