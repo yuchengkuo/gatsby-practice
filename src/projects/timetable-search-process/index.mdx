@@ -13,9 +13,225 @@ cover: ./cover.jpg
 hero: ./hero.jpg
 color:
 badge:
-  - show: true
-    message: onGoing
+  - show: false
+    message:
 images:
+  - ./images/image1.png
+  - ./images/process.png
+  - ./images/current-analysis.png
+  - ./images/user-flow.png
+  - ./images/wireframes.png
+  - ./images/wireflow.png
+  - ./images/lofi-prototype.png
+  - ./images/image-search-tab.png
+  - ./images/image-search-popup.png
+  - ./images/image-saved-tab.png
+  - ./images/image-result.png
 ---
 
-<UnderConstruction />
+#### // Intro
+
+## Overview
+
+This project is a self-implemented practice for better experience and interface design skills, and the idea comes from personal struggle with the current product. The main goal was to redesign a more intuitive and fluent process for timetable search.
+
+<FullWidth
+  image={props.images[0]}
+  overlay={false}
+  alt={"Screenshots of redesigned timetable app"}
+/>
+
+#### // Process
+
+<CustomWidth
+  image={props.images[1]}
+  width={"70vw"}
+  overlay={false}
+  shadow={false}
+  alt={
+    "Design process with four design phases, discovery, define, design, develop"
+  }
+/>
+
+###### 01
+
+## Discovery
+
+### Background
+
+Taiwan Railway Administration (TRA) is the train transportation in Taiwan.
+
+Recently released (2019) fourth generation of the ticket booking system offers common services like ticket booking, timetable searching, and live train info. There’re other third party apps provide similar
+
+This project covers the redesign of the mainly used service, search process for timetable.
+
+### The problems
+
+The main problem of the current search process is tedious and time-consuming, especially when the user need to switch between the departure and arrival stations often.
+
+### The challenges
+
+- Large amount of the stations and counties (242 stations & 19 counties)
+- 3 ways to show the results
+- Subline / mainline (7 sublines)
+
+### Current analysis
+
+For [official TRA app](link to app), I throughly analyzed the current product and experience, hoping to discover the opportunities to improve the experience.
+
+Other apps for train timetable also have similar search process.
+
+<CustomWidth
+  image={props.images[2]}
+  width={"70vw"}
+  overlay={false}
+  shadow={false}
+  alt={
+    "Current product experience analysis with in-app screenshot, analysis of four pages, search page, search popup, date popup, result page"
+  }
+/>
+
+---
+
+###### 02
+
+## Define
+
+### Design goal
+
+The focus will be on the search process, the main goal is to reduced search time by 40%.
+
+### Ideation
+
+### User flow
+
+The user flow shows how the users will interact with the product and help me identify what user could encounter during the search process.
+
+<CustomWidth
+  image={props.images[3]}
+  width={"60vw"}
+  overlay={false}
+  alt={
+    "User flowchart from start the search process to three different types of results"
+  }
+/>
+
+### Wireframes
+
+I did lots of explorations in wireframes to show how the structure and break the whole interface into components for better reusability.
+
+<CustomWidth
+  image={props.images[4]}
+  width={"60vw"}
+  overlay={false}
+  shadow={false}
+  alt={"Eight wireframes of the resigned app"}
+/>
+
+### Wire flow
+
+Combine the usr flowchart ang the wireframe to get more sense of how the search process will look and how it will work.
+
+<CustomWidth
+  image={props.images[5]}
+  width={"80vw"}
+  overlay={false}
+  shadow={false}
+  alt={"wireflow for the main user flow"}
+/>
+
+### Lo-fi prototype
+
+Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus.
+
+<CustomWidth
+  image={props.images[6]}
+  width={"80vw"}
+  overlay={false}
+  shadow={false}
+  alt={"wireflow for the main user flow"}
+/>
+
+---
+
+###### 03
+
+## Design
+
+With how it will work in mind, I moved on to the visual design, after some attempt and exploration I find this version the most clear and simple.
+
+### Search tab
+
+The search tab consists of current departure and arrival stations, date and time, train type and recent search history.
+
+<CustomWidth
+  image={props.images[7]}
+  width={"70vw"}
+  overlay={false}
+  alt={
+    "Screenshots of redesigned search tab, recent search history, date popup"
+  }
+/>
+
+### Search popup
+
+Two ways of searching
+
+<CustomWidth
+  image={props.images[8]}
+  width={"70vw"}
+  overlay={false}
+  alt={"Screenshots of redesigned search popup, using filter, input text"}
+/>
+
+### Saved tab
+
+The saved tab contains two different types of data user saved, time and stations, by clicking on the time item will update the stations and time and bring the user back to the search tab, in case the user want to change the info (like time and date). And the saved stations lead to the train results for that specific one.
+
+<CustomWidth
+  image={props.images[9]}
+  width={"70vw"}
+  overlay={false}
+  alt={"Screenshots of redesigned search popup, using filter, input text"}
+/>
+
+### Result page
+
+Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus
+
+<CustomWidth
+  image={props.images[10]}
+  width={"70vw"}
+  overlay={false}
+  alt={"Screenshots of redesigned search popup, using filter, input text"}
+/>
+
+###### 04
+
+## Develop
+
+### Interactive Prototype
+
+Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus.
+
+<iframe
+  style="border: 10px solid rgba(0, 0, 0, 0);"
+  width="100%"
+  height="800"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FujXeX3b4Sdq5iIo07SfVBN%2FTimetable-proecess%3Fpage-id%3D352%253A0%26node-id%3D352%253A335%26viewport%3D599%252C441%252C0.1678868681192398%26scaling%3Dscale-down"
+  allowfullscreen
+></iframe>
+
+---
+
+#### // Result
+
+## Outcome
+
+### Test & validation
+
+Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus.
+
+### Reflection
+
+Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus Arcu adipiscing sed accumsan, ac metus, quis nibh potenti risus.
