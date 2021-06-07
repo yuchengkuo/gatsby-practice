@@ -31,7 +31,7 @@ const Hero = (props) => {
         position: "relative",
         width: "100%",
         height: "100vh",
-        minHeight: 850,
+        minHeight: 700,
         maxHeight: 1200,
         maxWidth: 2400,
         flexDirection: "column",
@@ -61,7 +61,7 @@ const Hero = (props) => {
             {subtitle}
           </Text>
         </motion.div>
-        <Themed.h1>
+        <Themed.h1 sx={{ width: [`100%`, `80%`] }}>
           <motion.div
             initial="initial"
             animate="show"
@@ -144,12 +144,12 @@ const Hero = (props) => {
             },
             h4: {
               variant: "text.heading",
-              fontSize: 2,
+              fontSize: [1, 2],
               mb: 4,
             },
             p: {
               variant: "text.paragraph",
-              fontSize: 1,
+              fontSize: [0, 1],
               color: "lightGray",
             },
           }}
