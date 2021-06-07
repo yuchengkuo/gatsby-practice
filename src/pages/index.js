@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
       <Container as="section" variant="container.hero">
         <Themed.h1
           sx={{
-            fontSize: [48, 64],
+            fontSize: [40, 64],
             mb: 6,
           }}
         >
@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
               I'm YuCheng Kuo.<br></br>
             </MotionBox>
             <MotionBox variants={heroVariant}>
-              Nice to meet you.<br></br>
+              Different, but same.<br></br>
             </MotionBox>
           </motion.div>
         </Themed.h1>
@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
             nesciunt adipisci tempore? Ullam necessitatibus autem, consequuntur
             temporibus nulla sit. Fugit, deserunt!
           </Themed.p>
-          <Flex sx={{ mr: -4, ">*": { mr: 4 } }}>
+          <Flex sx={{ mr: -4, "> a": { mr: 4 } }}>
             <Link
               as={GatsbyLink}
               to="/about"
