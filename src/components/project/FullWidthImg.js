@@ -2,7 +2,13 @@
 import { Box, jsx, Themed } from "theme-ui";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const FullWidthImage = ({ children, image }) => {
+const FullWidthImage = ({
+  children,
+  image,
+  overlay = true,
+  shadow = true,
+  alt,
+}) => {
   return (
     <Box
       as="figure"
@@ -10,23 +16,25 @@ const FullWidthImage = ({ children, image }) => {
       sx={{
         position: "relative",
         width: `calc(100% + (99vw - 100%))`,
-        transition: "all 200ms ease-out",
         mx: `calc((100% - 99vw) / 2)`,
-        my: 11,
+        my: 10,
         borderRadius: 2,
+        pointerEvents: "none",
       }}
     >
       <Box
-        variant="overlay.radial"
-        sx={{
-          ".image": {
-            variant: "shadows.card",
-          },
-        }}
+        variant={overlay && "overlay.radial"}
+        sx={
+          shadow && {
+            ".image": {
+              variant: "shadows.card",
+            },
+          }
+        }
       >
         <GatsbyImage
           image={getImage(image)}
-          alt={`${children}`}
+          alt={`${children ?? alt}`}
           layout="fullWidth"
           className="image"
         />

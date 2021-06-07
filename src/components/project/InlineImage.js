@@ -2,20 +2,28 @@
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Box, jsx, Themed } from "theme-ui";
 
-const inlineImage = ({ children, image }) => {
+const inlineImage = ({
+  children,
+  image,
+  overlay = true,
+  shadow = true,
+  alt,
+}) => {
   return (
-    <Box as="figure">
+    <Box as="figure" sx={{ pointerEvents: "none" }}>
       <Box
-        variant="overlay.radial"
-        sx={{
-          ".image": {
-            variant: "shadows.card",
-          },
-        }}
+        variant={overlay && "overlay.radial"}
+        sx={
+          shadow && {
+            ".image": {
+              variant: "shadows.card",
+            },
+          }
+        }
       >
         <GatsbyImage
           image={getImage(image)}
-          alt={`${children}`}
+          alt={`${alt ?? children}`}
           layout="fullWidth"
           className="image"
         />
