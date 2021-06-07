@@ -193,7 +193,9 @@ const theme = {
     },
     hero: {
       maxWidth: "text",
-      height: 800,
+      height: "100vh",
+      minHeight: 600,
+      maxHeight: 1500,
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -213,18 +215,6 @@ const theme = {
       fontFamily: "body",
       fontWeight: "body",
       fontSize: "62.5%",
-      scrollbarColor: `#fba34a #18191b`,
-      scrollbarWidth: `thin`,
-      // scrollBehavior: `smooth`,
-      "::-webkit-scrollbar": {
-        width: "8px",
-      },
-      "::-webkit-scrollbar-track": {
-        backgroundColor: "background",
-      },
-      "::-webkit-scrollbar-thumb": {
-        backgroundColor: "primary",
-      },
       // mx: [7, 7, 0],
     },
     header: {
@@ -236,7 +226,7 @@ const theme = {
       py: 7,
     },
     h1: {
-      fontSize: 6,
+      fontSize: [4, 6],
       variant: "text.heading",
       m: 0,
       mb: 6,
