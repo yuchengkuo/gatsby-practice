@@ -1,0 +1,26 @@
+.full-width-img {
+  position: relative;
+  width: 99%;
+  left: 0.5%;
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 2.5rem);
+
+    background: radial-gradient(
+      80.1% 80.1% at 50% 50%,
+      rgba(29, 30, 33, 0) 0%,
+      rgba(29, 30, 33, 0.5) 100%
+    );
+    z-index: 1;
+  }
+
+  .cap {
+    text-align: center;
+    color: $gray;
+    margin-top: 1rem;
+  }
+
+  margin-bottom: 20rem;
+}

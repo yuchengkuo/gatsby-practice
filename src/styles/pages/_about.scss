@@ -1,0 +1,32 @@
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  padding-top: 3.6rem;
+
+  .about-image {
+    // position: inherit;
+    width: 60%;
+    z-index: -1;
+
+    .about-grad {
+      position: absolute;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(29, 30, 33, 0.4) 0%,
+        rgba(29, 30, 33, 0.8) 100%
+      );
+    }
+  }
+
+  .hero-text {
+    margin-left: -10%;
+  }
+}

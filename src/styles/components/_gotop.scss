@@ -1,0 +1,58 @@
+.go-top {
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+
+  $size: 6.4rem;
+
+  height: $size;
+  width: $size;
+
+  opacity: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: $black;
+  z-index: 9999;
+
+  animation: all 300ms ease-out;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  .progress-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .btn {
+    svg {
+      margin: calc((#{$size} - 4rem) / 2);
+    }
+  }
+
+  &:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+    background-color: $primary;
+    .btn {
+      transform: translateY(calc(-#{$size} * 1.05));
+      z-index: 5;
+      path {
+        fill: $black;
+      }
+    }
+  }
+}
+
+.show {
+  opacity: 0.8;
+  display: grid;
+}
+
+.hide {
+  opacity: 0;
+  bottom: -10rem;
+}

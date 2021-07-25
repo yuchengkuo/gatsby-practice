@@ -1,0 +1,48 @@
+.project-card {
+  position: relative;
+
+  max-width: 640px;
+  min-width: 300px;
+  min-height: 320px;
+  max-height: 400px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  border-radius: 0.5rem;
+
+  .project-text {
+    position: absolute;
+    padding: 1.2rem;
+    z-index: 1;
+    pointer-events: none;
+
+    h4 {
+      margin: 0;
+      color: $white;
+    }
+    p {
+      margin: 0;
+      color: $light-gray;
+    }
+  }
+
+  .project-image {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.card-link {
+  &:hover {
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+  &:active {
+    transform: scale3d(0.95, 0.95, 0.98);
+  }
+}
